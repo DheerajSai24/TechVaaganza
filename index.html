@@ -1745,6 +1745,123 @@
             text-align: center;
         }
 
+        /* UPI Payment Buttons Styles */
+        .upi-buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .upi-payment-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .upi-payment-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .upi-payment-btn:active {
+            transform: translateY(0);
+        }
+
+        .upi-icon {
+            flex-shrink: 0;
+        }
+
+        /* PhonePe Button - Purple Theme */
+        .phonepe-btn {
+            background: linear-gradient(135deg, #5f259f, #8247c5);
+            color: #ffffff;
+        }
+
+        .phonepe-btn:hover {
+            background: linear-gradient(135deg, #7033b3, #9556d9);
+            color: #ffffff;
+            border-color: #5f259f;
+        }
+
+        /* Google Pay / Others Button - Blue/Green Theme */
+        .gpay-btn {
+            background: linear-gradient(135deg, #1a73e8, #34a853);
+            color: #ffffff;
+        }
+
+        .gpay-btn:hover {
+            background: linear-gradient(135deg, #2b82f6, #46ba66);
+            color: #ffffff;
+            border-color: #1a73e8;
+        }
+
+        /* UPI Helper Note */
+        .upi-helper-note {
+            text-align: center;
+            font-size: 14px;
+            color: #ffa500;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 165, 0, 0.1);
+            border-radius: 8px;
+            border-left: 3px solid #ffa500;
+        }
+
+        /* Desktop Payment Note */
+        .desktop-payment-note {
+            display: none;
+            text-align: center;
+            font-size: 15px;
+            color: #ff6600;
+            margin: 15px 0;
+            padding: 12px;
+            background: rgba(255, 102, 0, 0.1);
+            border-radius: 8px;
+            border: 2px dashed #ff6600;
+        }
+
+        /* Show desktop note only on desktop */
+        @media (min-width: 769px) {
+            .desktop-payment-note {
+                display: block;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .upi-payment-btn {
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+
+            .upi-helper-note {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .upi-payment-btn {
+                padding: 12px 16px;
+                font-size: 14px;
+            }
+
+            .upi-icon {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
 
 
 
@@ -2632,26 +2749,44 @@
                         <h4>Payment (₹500)</h4>
                         
                         <!-- Mobile: Clickable QR with UPI Deep Link -->
-                        <a href="upi://pay?pa=8096335879@axl&pn=Thota%20Akshith%20Kumar&am=500&cu=INR" class="qr-code-link" id="qrCodeLink">
+                        <a href="upi://pay?pa=7396540384@ybl&pn=Ayesha%20Noor&am=500&cu=INR" class="qr-code-link" id="qrCodeLink">
                             <img src="images/qr-code.jpeg" alt="Payment QR Code" class="qr-code-image">
                         </a>
                         
-                        <!-- Mobile Payment Button -->
-                        <a href="upi://pay?pa=8096335879@axl&pn=Thota%20Akshith%20Kumar&am=500&cu=INR" class="upi-payment-btn" id="upiPayBtn">
-                            <svg class="upi-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="5" width="20" height="14" rx="2"/>
-                                <line x1="2" y1="10" x2="22" y2="10"/>
-                            </svg>
-                            Pay ₹500 via UPI
-                        </a>
+                        <!-- Payment Buttons Container -->
+                        <div class="upi-buttons-container">
+                            <!-- PhonePe Button -->
+                            <a href="phonepe://pay?pa=7396540384@ybl&pn=Ayesha%20Noor&am=500&cu=INR" class="upi-payment-btn phonepe-btn" id="phonePeBtn">
+                                <svg class="upi-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/>
+                                    <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/>
+                                    <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/>
+                                </svg>
+                                Pay ₹500 via PhonePe
+                            </a>
+                            
+                            <!-- Google Pay / Other UPI Apps Button -->
+                            <a href="upi://pay?pa=7396540384@ybl&pn=Ayesha%20Noor&am=500&cu=INR" class="upi-payment-btn gpay-btn" id="gPayBtn">
+                                <svg class="upi-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                                    <line x1="2" y1="10" x2="22" y2="10"/>
+                                </svg>
+                                Pay ₹500 via Google Pay / Other UPI Apps
+                            </a>
+                        </div>
+                        
+                        <!-- Helper Note -->
+                        <p class="upi-helper-note">
+                            💡 If PhonePe doesn't open, please use Google Pay / Other UPI Apps.
+                        </p>
                         
                         <!-- Desktop Note -->
                         <p class="desktop-payment-note" id="desktopNote">
-                            📱 Please use your mobile device to complete the payment
+                            📱 Please use a mobile device for UPI payment
                         </p>
                         
                         <p class="payment-instructions">
-                            <strong>Tap the QR code or button above</strong> to pay via UPI, then <strong>enter the transaction ID</strong> below
+                            <strong>Tap any payment button above</strong> to pay via UPI, then <strong>enter the transaction ID</strong> below
                         </p>
                     </div>
                     
