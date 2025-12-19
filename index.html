@@ -1782,28 +1782,16 @@
             flex-shrink: 0;
         }
 
-        /* PhonePe Button - Purple Theme */
-        .phonepe-btn {
-            background: linear-gradient(135deg, #5f259f, #8247c5);
+        /* Universal UPI Button - Orange Theme */
+        .universal-upi-btn {
+            background: linear-gradient(135deg, #ff6600, #ff9944);
             color: #ffffff;
         }
 
-        .phonepe-btn:hover {
-            background: linear-gradient(135deg, #7033b3, #9556d9);
+        .universal-upi-btn:hover {
+            background: linear-gradient(135deg, #ff7722, #ffaa55);
             color: #ffffff;
-            border-color: #5f259f;
-        }
-
-        /* Google Pay / Others Button - Blue/Green Theme */
-        .gpay-btn {
-            background: linear-gradient(135deg, #1a73e8, #34a853);
-            color: #ffffff;
-        }
-
-        .gpay-btn:hover {
-            background: linear-gradient(135deg, #2b82f6, #46ba66);
-            color: #ffffff;
-            border-color: #1a73e8;
+            border-color: #ff6600;
         }
 
         /* UPI Helper Note */
@@ -2755,29 +2743,19 @@
                         
                         <!-- Payment Buttons Container -->
                         <div class="upi-buttons-container">
-                            <!-- PhonePe Button -->
-                            <a href="phonepe://pay?pa=7396540384@ybl&pn=Ayesha%20Noor&am=500&cu=INR" class="upi-payment-btn phonepe-btn" id="phonePeBtn">
-                                <svg class="upi-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/>
-                                    <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/>
-                                    <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/>
-                                </svg>
-                                Pay ₹500 via PhonePe
-                            </a>
-                            
-                            <!-- Google Pay / Other UPI Apps Button -->
-                            <a href="upi://pay?pa=7396540384@ybl&pn=Ayesha%20Noor&am=500&cu=INR" class="upi-payment-btn gpay-btn" id="gPayBtn">
+                            <!-- Universal UPI Button -->
+                            <a href="upi://pay?pa=7396540384@ybl&pn=Ayesha%20Noor&am=500&cu=INR" class="upi-payment-btn universal-upi-btn" id="upiPayBtn">
                                 <svg class="upi-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="2" y="5" width="20" height="14" rx="2"/>
                                     <line x1="2" y1="10" x2="22" y2="10"/>
                                 </svg>
-                                Pay ₹500 via Google Pay / Other UPI Apps
+                                Pay ₹500 via UPI
                             </a>
                         </div>
                         
                         <!-- Helper Note -->
                         <p class="upi-helper-note">
-                            💡 If PhonePe doesn't open, please use Google Pay / Other UPI Apps.
+                            💳 Choose your preferred UPI app (PhonePe, Google Pay, Paytm, BHIM, etc.) from the payment options.
                         </p>
                         
                         <!-- Desktop Note -->
@@ -2786,7 +2764,7 @@
                         </p>
                         
                         <p class="payment-instructions">
-                            <strong>Tap any payment button above</strong> to pay via UPI, then <strong>enter the transaction ID</strong> below
+                            <strong>Tap the button above</strong> to pay via your UPI app, then <strong>enter the transaction ID</strong> below
                         </p>
                     </div>
                     
