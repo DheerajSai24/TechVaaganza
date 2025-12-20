@@ -1745,6 +1745,46 @@
             text-align: center;
         }
 
+        .form-message {
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            animation: slideDown 0.4s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-message-success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            border: 2px solid #34d399;
+        }
+
+        .form-message-error {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: #ffffff;
+            border: 2px solid #f87171;
+        }
+
+        .form-message-info {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            border: 2px solid #60a5fa;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* UPI Payment Buttons Styles */
         .upi-buttons-container {
             display: flex;
@@ -2025,7 +2065,7 @@
             background: linear-gradient(145deg, rgba(18, 18, 30, 0.98), rgba(28, 28, 42, 0.98));
             border: 2px solid rgba(255, 102, 0, 0.35);
             border-radius: 20px;
-            padding: 40px 35px;
+            padding: 20px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7),
                         0 0 0 1px rgba(255, 102, 0, 0.15) inset,
@@ -2633,15 +2673,17 @@
                     <div class="event-timeline-dot"></div>
                     <div class="event-timeline-card">
                         <span class="event-timeline-day-badge">Day 1</span>
-                        <h2 class="event-timeline-card-title">Foundation</h2>
-                        <h3 class="event-timeline-card-subtitle">Introduction to AWS & Cloud Fundamentals</h3>
+                        <h2 class="event-timeline-card-title">Cloud & AWS Foundations + Portfolio Mindset</h2>
+                        <h3 class="event-timeline-card-subtitle">Building strong cloud fundamentals and a portfolio mindset</h3>
                         <ul class="event-timeline-list">
-                            <li class="event-timeline-list-item">Welcome & event orientation</li>
-                            <li class="event-timeline-list-item">Introduction to cloud computing concepts</li>
-                            <li class="event-timeline-list-item">AWS account setup and navigation</li>
-                            <li class="event-timeline-list-item">Hands-on: EC2 instances and S3 storage</li>
-                            <li class="event-timeline-list-item">Understanding AWS global infrastructure</li>
-                            <li class="event-timeline-list-item">IAM: Users, roles, and permissions</li>
+                            <li class="event-timeline-list-item">What is cloud computing and why it matters today</li>
+                            <li class="event-timeline-list-item">Traditional IT vs Cloud (cost, scalability, speed)</li>
+                            <li class="event-timeline-list-item">Cloud service models: IaaS, PaaS, SaaS</li>
+                            <li class="event-timeline-list-item">Public cloud overview & shared responsibility model</li>
+                            <li class="event-timeline-list-item">AWS global infrastructure: regions and availability zones</li>
+                            <li class="event-timeline-list-item">Core AWS services overview and AWS Free Tier</li>
+                            <li class="event-timeline-list-item">Building a cloud portfolio and testing locally</li>
+                            <li class="event-timeline-list-item">Hosting a static portfolio website on AWS S3</li>
                         </ul>
                     </div>
                 </div>
@@ -2651,15 +2693,16 @@
                     <div class="event-timeline-dot"></div>
                     <div class="event-timeline-card">
                         <span class="event-timeline-day-badge">Day 2</span>
-                        <h2 class="event-timeline-card-title">Intermediate</h2>
-                        <h3 class="event-timeline-card-subtitle">Advanced AWS Services & DevOps</h3>
+                        <h2 class="event-timeline-card-title">AI Foundations & Modern Cloud Applications</h2>
+                        <h3 class="event-timeline-card-subtitle">Understanding AI concepts and building AI-powered solutions on AWS</h3>
                         <ul class="event-timeline-list">
-                            <li class="event-timeline-list-item">Database services: RDS and DynamoDB</li>
-                            <li class="event-timeline-list-item">Serverless computing with AWS Lambda</li>
-                            <li class="event-timeline-list-item">API Gateway and microservices architecture</li>
-                            <li class="event-timeline-list-item">Introduction to Docker and containerization</li>
-                            <li class="event-timeline-list-item">CI/CD pipelines with AWS CodePipeline</li>
-                            <li class="event-timeline-list-item">Hands-on project: Deploy a full-stack application</li>
+                            <li class="event-timeline-list-item">What Artificial Intelligence is and how it works</li>
+                            <li class="event-timeline-list-item">Difference between ML, Generative AI, and traditional applications</li>
+                            <li class="event-timeline-list-item">Where AI fits in cloud platforms</li>
+                            <li class="event-timeline-list-item">Real-world AI use cases students already use</li>
+                            <li class="event-timeline-list-item">Core AI terminology: LLMs, RAG, Foundation Models</li>
+                            <li class="event-timeline-list-item">Introduction to Kiro and its role in the AI lifecycle</li>
+                            <li class="event-timeline-list-item">How tools like Kiro accelerate AI application development</li>
                         </ul>
                     </div>
                 </div>
@@ -2669,16 +2712,16 @@
                     <div class="event-timeline-dot"></div>
                     <div class="event-timeline-card">
                         <span class="event-timeline-day-badge">Day 3</span>
-                        <h2 class="event-timeline-card-title">Advanced</h2>
-                        <h3 class="event-timeline-card-subtitle">Cloud Architecture & Best Practices</h3>
+                        <h2 class="event-timeline-card-title">AI-Powered Applications on AWS</h2>
+                        <h3 class="event-timeline-card-subtitle">Building and deploying AI-driven applications using AWS services</h3>
                         <ul class="event-timeline-list">
-                            <li class="event-timeline-list-item">AWS networking: VPC, security groups, load balancers</li>
-                            <li class="event-timeline-list-item">Monitoring and logging with CloudWatch</li>
-                            <li class="event-timeline-list-item">Cost optimization strategies</li>
-                            <li class="event-timeline-list-item">Infrastructure as Code with CloudFormation</li>
-                            <li class="event-timeline-list-item">AWS Well-Architected Framework</li>
-                            <li class="event-timeline-list-item">Career guidance and AWS certification pathways</li>
-                            <li class="event-timeline-list-item">Final project presentations and closing ceremony</li>
+                            <li class="event-timeline-list-item">Introduction to AWS Bedrock and foundation models</li>
+                            <li class="event-timeline-list-item">AWS Lambda for serverless backend logic</li>
+                            <li class="event-timeline-list-item">API Gateway for exposing AI services</li>
+                            <li class="event-timeline-list-item">Integrating Bedrock with Lambda and APIs</li>
+                            <li class="event-timeline-list-item">Hosting and accessing AI applications over the internet</li>
+                            <li class="event-timeline-list-item">End-to-end AI-powered chatbot architecture</li>
+                            <li class="event-timeline-list-item">Final wrap-up and learning outcomes</li>
                         </ul>
                     </div>
                 </div>
@@ -2712,6 +2755,8 @@
                         <select id="studentBranch" name="branch" required>
                             <option value="">Select your branch</option>
                             <option value="CSE">Computer Science Engineering (CSE)</option>
+                            <option value="CSE">Computer Science & Machine Learning (CSM)</option>
+                            <option value="CSE">Computer Science & Data Science (CSD)</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -2755,7 +2800,7 @@
                         
                         <!-- Helper Note -->
                         <p class="upi-helper-note">
-                            💳 You can edit the amount in your UPI app (PhonePe, Google Pay, Paytm, etc.) before confirming payment.
+                            💳 You can pay the amount in your UPI app (PhonePe, Google Pay, Paytm, etc.) before confirming payment.
                         </p>
                         
                         <!-- Desktop Note -->
@@ -2772,6 +2817,13 @@
                         <label for="studentTransaction">Transaction ID *</label>
                         <input type="text" id="studentTransaction" name="transactionId" required 
                             placeholder="Enter your transaction ID" minlength="6">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="paymentScreenshot">Payment Screenshot *</label>
+                        <input type="file" id="paymentScreenshot" name="paymentScreenshot" required 
+                            accept="image/*,.pdf" class="file-input">
+                        <small class="form-helper-text">Upload screenshot of your payment confirmation (Image or PDF, max 5MB)</small>
                     </div>
                     
                     <div id="formMessage" class="form-message-hidden"></div>
@@ -3135,66 +3187,158 @@
 
     })();
 </script>
-    <script>
-    const techForm = document.getElementById('techVaaganzaForm');
-    const submitBtn = document.getElementById('submitRegistration');
-    const formMessage = document.getElementById('formMessage');
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwZlRhjtbHun8NAEFxFFUFp9FH-gsxqjgqZGzzOTZHxoVlx-ShGfVMLNGMJQnL11EJs/exec';
+   
 
-    techForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting...';
-        formMessage.style.display = 'none';
-        
-        const formData = {
-            name: document.getElementById('studentName').value,
-            rollNumber: document.getElementById('studentRoll').value,
-            branch: document.getElementById('studentBranch').value,
-            year: document.getElementById('studentYear').value,
-            email: document.getElementById('studentEmail').value,
-            phone: document.getElementById('studentPhone').value,
-            transactionId: document.getElementById('studentTransaction').value
-        };
-        
-        try {
-            const response = await fetch(SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                cache: 'no-cache',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                redirect: 'follow',
-                body: JSON.stringify(formData)
-            });
-            
-            // Note: With no-cors mode, we can't read the response
-            // Assume success if no error was thrown
-            formMessage.textContent = 'Registration submitted successfully! We will contact you soon.';
-            formMessage.style.backgroundColor = '#d4edda';
-            formMessage.style.color = '#155724';
-            formMessage.style.border = '1px solid #c3e6cb';
-            formMessage.style.display = 'block';
-            techForm.reset();
-            
-        } catch (error) {
-            formMessage.textContent = 'Network error. Please check your connection and try again.';
-            formMessage.style.backgroundColor = '#f8d7da';
-            formMessage.style.color = '#721c24';
-            formMessage.style.border = '1px solid #f5c6cb';
-            formMessage.style.display = 'block';
-            console.error('Error:', error);
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit Registration';
-            
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 8000);
-        }
+<script>
+// TechVaaganza 2025 - Form Submission Handler
+// Your Apps Script Web App URL
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzqD0Q5DYgGqpQWkDsSXZOJdqeFEhT6m33KTaln0J9dEi5Z4ywUHkSZhA1jmiO_5xSIhA/exec';
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('techVaaganzaForm');
+  const submitBtn = document.getElementById('submitRegistration');
+  const formMessage = document.getElementById('formMessage');
+  
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // Disable submit button
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    
+    try {
+      // Get form data
+      const formData = {
+        name: document.getElementById('studentName').value.trim(),
+        rollNumber: document.getElementById('studentRoll').value.trim(),
+        branch: document.getElementById('studentBranch').value,
+        year: document.getElementById('studentYear').value,
+        email: document.getElementById('studentEmail').value.trim(),
+        phone: document.getElementById('studentPhone').value.trim(),
+        transactionId: document.getElementById('studentTransaction').value.trim()
+      };
+      
+      // Validate all fields
+      if (!formData.name || !formData.rollNumber || !formData.branch || 
+          !formData.year || !formData.email || !formData.phone || 
+          !formData.transactionId) {
+        throw new Error('Please fill all required fields');
+      }
+      
+      // Get payment screenshot
+      const fileInput = document.getElementById('paymentScreenshot');
+      const file = fileInput.files[0];
+      
+      if (!file) {
+        throw new Error('Please upload payment screenshot');
+      }
+      
+      // Check file size (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        throw new Error('File size must be less than 5MB');
+      }
+      
+      // Check file type
+      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'application/pdf'];
+      if (!allowedTypes.includes(file.type)) {
+        throw new Error('Please upload an image (JPG, PNG, GIF) or PDF file');
+      }
+      
+      // Show uploading message
+      showMessage('📤 Uploading... Please wait, this may take a moment', 'info');
+      
+      // Convert file to base64
+      const base64File = await fileToBase64(file);
+      formData.paymentScreenshot = base64File;
+      
+      // Submit to Google Apps Script
+      const response = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      // Since mode is 'no-cors', we can't read the response
+      // But if no error was thrown, submission was successful
+      showMessage('✅ Registration submitted successfully! Check your email for confirmation.', 'success');
+      
+      // Reset form
+      form.reset();
+      
+      // Scroll to message
+      formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+    } catch (error) {
+      console.error('Submission error:', error);
+      showMessage('❌ Error: ' + error.message, 'error');
+    } finally {
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Registration';
+    }
+  });
+  
+  // Helper function to convert file to base64
+  function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
     });
+  }
+  
+  // Helper function to show messages
+  function showMessage(message, type) {
+    formMessage.textContent = message;
+    formMessage.className = 'form-message form-message-' + type;
+    formMessage.style.display = 'block';
+    
+    // Hide message after 10 seconds for success
+    if (type === 'success') {
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 10000);
+    }
+  }
+  
+  // File input validation
+  document.getElementById('paymentScreenshot').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      // Check file size
+      if (file.size > 5 * 1024 * 1024) {
+        alert('⚠️ File size must be less than 5MB');
+        e.target.value = '';
+        return;
+      }
+      
+      // Check file type
+      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'application/pdf'];
+      if (!allowedTypes.includes(file.type)) {
+        alert('⚠️ Please upload an image (JPG, PNG, GIF) or PDF file');
+        e.target.value = '';
+        return;
+      }
+      
+      // Show file name
+      console.log('File selected:', file.name, '(' + (file.size / 1024).toFixed(2) + ' KB)');
+    }
+  });
+  
+  // Phone number validation - only allow 10 digits
+  document.getElementById('studentPhone').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+  });
+  
+  // Transaction ID validation - remove spaces and special characters
+  document.getElementById('studentTransaction').addEventListener('input', function(e) {
+    this.value = this.value.trim().toUpperCase();
+  });
+});
 </script>
 
 <script>
