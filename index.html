@@ -1834,6 +1834,18 @@
             border-color: #ff6600;
         }
 
+        /* QR Download Button */
+        .qr-download-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #ffffff;
+        }
+
+        .qr-download-btn:hover {
+            background: linear-gradient(135deg, #34d399, #10b981);
+            color: #ffffff;
+            border-color: #10b981;
+        }
+
         /* UPI Helper Note */
         .upi-helper-note {
             text-align: center;
@@ -2796,6 +2808,16 @@
                                 </svg>
                                 Pay ₹500 via UPI
                             </a>
+                            
+                            <!-- Download QR Code Button -->
+                            <button type="button" class="upi-payment-btn qr-download-btn" id="downloadQrBtn">
+                                <svg class="upi-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download QR Code
+                            </button>
                         </div>
                         
                         <!-- Helper Note -->
@@ -3337,6 +3359,37 @@ document.addEventListener('DOMContentLoaded', function() {
   // Transaction ID validation - remove spaces and special characters
   document.getElementById('studentTransaction').addEventListener('input', function(e) {
     this.value = this.value.trim().toUpperCase();
+  });
+  
+  // QR Code Download Button
+  document.getElementById('downloadQrBtn').addEventListener('click', async function() {
+    try {
+      const qrImagePath = 'images/qr-code.jpeg';
+      
+      // Fetch the image as blob
+      const response = await fetch(qrImagePath);
+      const blob = await response.blob();
+      
+      // Create download link
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'TechVaaganza-Payment-QR.jpeg';
+      
+      // Trigger download
+      document.body.appendChild(link);
+      link.click();
+      
+      // Cleanup
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+      // Show success message
+      showMessage('✅ QR Code downloaded successfully!', 'success');
+    } catch (error) {
+      console.error('Download error:', error);
+      showMessage('❌ Failed to download QR code. Please try again.', 'error');
+    }
   });
 });
 </script>
