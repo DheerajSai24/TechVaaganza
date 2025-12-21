@@ -3544,8 +3544,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function vdcUpdateCarousel() {
             vdcCards.forEach((card, index) => {
-                const position = index - vdcCurrentIndex;
+                // Calculate relative position from current index
+                let position = index - vdcCurrentIndex;
                 
+                // Handle circular wrapping
+                // If position is too negative, wrap it to the positive side
+                if (position < -Math.floor(vdcTotalCards / 2)) {
+                    position += vdcTotalCards;
+                }
+                // If position is too positive, wrap it to the negative side
+                if (position > Math.floor(vdcTotalCards / 2)) {
+                    position -= vdcTotalCards;
+                }
+                
+                // Set data-position based on calculated position
                 if (position === 0) {
                     card.setAttribute('data-position', '0');
                 } else if (position === 1) {
