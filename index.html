@@ -230,6 +230,10 @@
             transition: all 0.3s;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 
         .vdc-arrow:hover {
@@ -335,7 +339,7 @@
             
             .vdc-carousel-wrapper {
                 height: 350px;
-                overflow: hidden;
+                overflow: visible;
             }
             
             .vdc-card {
@@ -347,17 +351,19 @@
             .vdc-card[data-position="0"] {
                 z-index: 5;
                 transform: translateX(0) scale(1) rotateY(0deg);
+                opacity: 1;
+                filter: brightness(1.2);
             }
             
             .vdc-card[data-position="-1"] {
                 z-index: 4;
-                transform: translateX(-200px) scale(0.75) rotateY(20deg);
+                transform: translateX(-160px) scale(0.75) rotateY(20deg);
                 opacity: 0.6;
             }
             
             .vdc-card[data-position="1"] {
                 z-index: 4;
-                transform: translateX(200px) scale(0.75) rotateY(-20deg);
+                transform: translateX(160px) scale(0.75) rotateY(-20deg);
                 opacity: 0.6;
             }
             
@@ -395,6 +401,7 @@
             
             .vdc-carousel-wrapper {
                 height: 300px;
+                overflow: visible;
             }
             
             .vdc-card {
@@ -402,12 +409,21 @@
                 height: 200px;
             }
             
+            .vdc-card[data-position="0"] {
+                z-index: 5;
+                transform: translateX(0) scale(1) rotateY(0deg);
+                opacity: 1;
+                filter: brightness(1.2);
+            }
+            
             .vdc-card[data-position="-1"] {
-                transform: translateX(-150px) scale(0.7) rotateY(15deg);
+                transform: translateX(-130px) scale(0.7) rotateY(15deg);
+                opacity: 0.5;
             }
             
             .vdc-card[data-position="1"] {
-                transform: translateX(150px) scale(0.7) rotateY(-15deg);
+                transform: translateX(130px) scale(0.7) rotateY(-15deg);
+                opacity: 0.5;
             }
             
             .vdc-arrow {
@@ -1089,6 +1105,10 @@
             transition: all 0.3s;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 
         .vdc-arrow:hover {
@@ -1194,7 +1214,7 @@
             
             .vdc-carousel-wrapper {
                 height: 350px;
-                overflow: hidden;
+                overflow: visible;
             }
             
             .vdc-card {
@@ -1206,17 +1226,19 @@
             .vdc-card[data-position="0"] {
                 z-index: 5;
                 transform: translateX(0) scale(1) rotateY(0deg);
+                opacity: 1;
+                filter: brightness(1.2);
             }
             
             .vdc-card[data-position="-1"] {
                 z-index: 4;
-                transform: translateX(-200px) scale(0.75) rotateY(20deg);
+                transform: translateX(-160px) scale(0.75) rotateY(20deg);
                 opacity: 0.6;
             }
             
             .vdc-card[data-position="1"] {
                 z-index: 4;
-                transform: translateX(200px) scale(0.75) rotateY(-20deg);
+                transform: translateX(160px) scale(0.75) rotateY(-20deg);
                 opacity: 0.6;
             }
             
@@ -1254,6 +1276,7 @@
             
             .vdc-carousel-wrapper {
                 height: 300px;
+                overflow: visible;
             }
             
             .vdc-card {
@@ -1261,12 +1284,21 @@
                 height: 200px;
             }
             
+            .vdc-card[data-position="0"] {
+                z-index: 5;
+                transform: translateX(0) scale(1) rotateY(0deg);
+                opacity: 1;
+                filter: brightness(1.2);
+            }
+            
             .vdc-card[data-position="-1"] {
-                transform: translateX(-150px) scale(0.7) rotateY(15deg);
+                transform: translateX(-130px) scale(0.7) rotateY(15deg);
+                opacity: 0.5;
             }
             
             .vdc-card[data-position="1"] {
-                transform: translateX(150px) scale(0.7) rotateY(-15deg);
+                transform: translateX(130px) scale(0.7) rotateY(-15deg);
+                opacity: 0.5;
             }
             
             .vdc-arrow {
