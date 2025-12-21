@@ -820,8 +820,12 @@
 
         .tech-image-wrapper {
             position: relative;
-            padding-top: 100%;
+            padding-top: 150%;
             overflow: hidden;
+        }
+
+        .tech-trainer-card .tech-image-wrapper {
+            padding-top: 130%;
         }
 
         .tech-image-wrapper img {
@@ -839,22 +843,13 @@
         }
 
         .tech-image-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
-            padding: 20px;
-            transform: translateY(100%);
-            transition: transform 0.4s;
+            padding: 12px 10px;
+            text-align: center;
         }
 
-        .tech-image-card:hover .tech-image-overlay {
-            transform: translateY(0);
-        }
-
+        /* Remove hover effect for text */
         .tech-image-name {
-            color: #fff;
+            color: #ff8c00;
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 5px;
@@ -864,6 +859,41 @@
             color: #ff8c00;
             font-size: 0.9rem;
             font-weight: 400;
+            margin-bottom: 0;
+        }
+
+        .tech-image-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tech-know-more {
+            display: none;
+        }
+
+        .tech-know-more-mobile {
+            display: block;
+            color: #fff;
+            background: rgba(255, 140, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .tech-know-more-mobile:hover {
+            background: #ff8c00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
+        }
+
+        .tech-trainer-card {
+            display: flex;
+            flex-direction: column;
         }
 
         /* Responsive */
@@ -1826,7 +1856,9 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin: 20px 0;
+            margin: 20px auto;
+            align-items: center;
+            justify-content: center;
         }
 
         .upi-payment-btn {
@@ -1874,6 +1906,8 @@
         .qr-download-btn {
             background: linear-gradient(135deg, #10b981, #059669);
             color: #ffffff;
+            max-width: 250px;
+            width: 100%;
         }
 
         .qr-download-btn:hover {
@@ -2360,13 +2394,14 @@
                 <div class="tech-images-grid" id="techImagesGrid">
                     
                     <!-- Guest/Faculty Card 1 -->
-                    <div class="tech-image-card">
+                    <div class="tech-image-card tech-trainer-card">
                         <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600" alt="Guest 1">
+                            <img src="./images/Trainee image.png" alt="Avinash Reddy Thipparthi">
                         </div>
                         <div class="tech-image-overlay">
-                            <div class="tech-image-name">Dr. Rajesh Kumar</div>
-                            <div class="tech-image-role">Chief Guest</div>
+                            <div class="tech-image-name">Avinash Reddy Thipparthi</div>
+                            <div class="tech-image-role">Cloud & DevOps Architect</div>
+                            <a href="trainer.html" class="tech-know-more tech-know-more-mobile">Know More</a>
                         </div>
                     </div>
 
@@ -2422,28 +2457,6 @@
                         <div class="tech-image-overlay">
                             <div class="tech-image-name">Ms. Ananya Desai</div>
                             <div class="tech-image-role">Industry Expert</div>
-                        </div>
-                    </div>
-
-                    <!-- Guest/Faculty Card 7 -->
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600" alt="Guest 7">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Dr. Karthik Menon</div>
-                            <div class="tech-image-role">Dean - Engineering</div>
-                        </div>
-                    </div>
-
-                    <!-- Guest/Faculty Card 8 -->
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600" alt="Guest 8">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Ms. Divya Rao</div>
-                            <div class="tech-image-role">AI Researcher</div>
                         </div>
                     </div>
 
@@ -2588,6 +2601,10 @@
                 <!-- Card 8 -->
                 <div class="vdc-card" data-position="hidden">
                     <img src="./images/img8.JPG" alt="TechVaaganza Student Activities">
+                </div>
+                <!-- Card 9 -->
+                <div class="vdc-card" data-position="hidden">
+                    <img src="./images/img1.JPG" alt="TechVaaganza AWS Training Sessions">
                 </div>
                 <!-- Card 10 -->
                 <div class="vdc-card" data-position="hidden">
@@ -3233,6 +3250,7 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="trainer.html">Trainer</a></li>
                         <li><a href="#highlights">Highlights</a></li>
                         <li><a href="#timeline">Timeline</a></li>
                         <li><a href="#register">Register</a></li>

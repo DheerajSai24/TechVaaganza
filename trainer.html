@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Trainer - Avinash Reddy Thipparthi | TechVaaganza</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar - Mobile First */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+        }
+
+        .navbar .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .navbar .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #fff 0%, #ff8c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            z-index: 1001;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #ff8c00;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            max-width: 300px;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            list-style: none;
+            padding: 80px 30px 30px;
+            transition: right 0.3s ease;
+            border-left: 1px solid rgba(255, 140, 0, 0.2);
+        }
+
+        .nav-links.active {
+            right: 0;
+        }
+
+        .nav-links li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 140, 0, 0.1);
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .nav-links a:hover {
+            color: #ff8c00;
+        }
+
+        /* Hero Section - Mobile First */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            position: relative;
+            padding: 100px 20px 60px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255, 140, 0, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #ff8c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero-text h2 {
+            font-size: 1.3rem;
+            color: #ff8c00;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .trainer-photo {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 140, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 140, 0, 0.2);
+        }
+
+        .trainer-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styles - Mobile First */
+        section {
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-label {
+            color: #ff8c00;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #ff8c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+
+        /* About Section - Mobile First */
+        .about-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-card {
+            background: rgba(255, 140, 0, 0.05);
+            border: 2px solid rgba(255, 140, 0, 0.2);
+            border-radius: 15px;
+            padding: 30px 20px;
+            transition: all 0.3s;
+        }
+
+        .about-card:active {
+            border-color: #ff8c00;
+            box-shadow: 0 10px 40px rgba(255, 140, 0, 0.2);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .about-card ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-card ul li {
+            padding: 12px 0;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            padding-left: 30px;
+            font-size: 0.95rem;
+        }
+
+        .about-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Achievements Section - Mobile First */
+        .achievements-section {
+            background: #0a0a0a;
+        }
+
+        .achievements-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 140, 0, 0.05));
+            border: 2px solid rgba(255, 140, 0, 0.3);
+            border-radius: 15px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 140, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .achievement-card:active::before {
+            opacity: 1;
+        }
+
+        .achievement-card:active {
+            border-color: #ff8c00;
+            box-shadow: 0 10px 40px rgba(255, 140, 0, 0.3);
+        }
+
+        .achievement-card h3 {
+            font-size: 1.3rem;
+            color: #ff8c00;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .achievement-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff8c00, #ff6b00);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Certifications Section - Mobile First */
+        .certifications-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .cert-category {
+            margin-bottom: 40px;
+        }
+
+        .cert-category h3 {
+            font-size: 1.5rem;
+            color: #ff8c00;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(255, 140, 0, 0.3);
+        }
+
+        .cert-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cert-item {
+            background: rgba(255, 140, 0, 0.05);
+            border: 1px solid rgba(255, 140, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px 15px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-height: 70px;
+        }
+
+        .cert-item:active {
+            border-color: #ff8c00;
+            background: rgba(255, 140, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .cert-name {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            flex: 1;
+            font-size: 0.95rem;
+        }
+
+        /* Philosophy Section - Mobile First */
+        .philosophy-section {
+            background: #0a0a0a;
+            text-align: center;
+        }
+
+        .quote-box {
+            margin: 40px auto 0;
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 140, 0, 0.05));
+            border: 2px solid rgba(255, 140, 0, 0.3);
+            border-radius: 20px;
+            padding: 40px 25px;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(255, 140, 0, 0.3);
+            font-family: Georgia, serif;
+        }
+
+        .quote-text {
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            color: #ff8c00;
+            font-weight: 600;
+        }
+
+        .philosophy-points {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .philosophy-card {
+            background: rgba(255, 140, 0, 0.05);
+            border: 2px solid rgba(255, 140, 0, 0.2);
+            border-radius: 15px;
+            padding: 30px 20px;
+            transition: all 0.3s;
+        }
+
+        .philosophy-card:active {
+            border-color: #ff8c00;
+        }
+
+        .philosophy-card h4 {
+            font-size: 1.2rem;
+            color: #ff8c00;
+            margin-bottom: 12px;
+        }
+
+        .philosophy-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Why Choose Section - Mobile First */
+        .why-choose-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .why-choose-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .why-card {
+            background: rgba(255, 140, 0, 0.05);
+            border: 2px solid rgba(255, 140, 0, 0.2);
+            border-radius: 15px;
+            padding: 30px 20px;
+            transition: all 0.3s;
+        }
+
+        .why-card:active {
+            border-color: #ff8c00;
+            box-shadow: 0 10px 40px rgba(255, 140, 0, 0.2);
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* About Academy Section - Mobile First */
+        .about-academy-section {
+            background: #0a0a0a;
+        }
+
+        .academy-content {
+            text-align: center;
+        }
+
+        .academy-intro {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .academy-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .academy-card {
+            background: rgba(255, 140, 0, 0.05);
+            border: 2px solid rgba(255, 140, 0, 0.2);
+            border-radius: 15px;
+            padding: 30px 20px;
+            transition: all 0.3s;
+        }
+
+        .academy-card:active {
+            border-color: #ff8c00;
+        }
+
+        .academy-card h3 {
+            font-size: 1.5rem;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+
+        .academy-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .academy-commitment {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* Footer - Mobile First */
+        footer {
+            background: #000000;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 140, 0, 0.2);
+        }
+
+        .footer-content {
+            margin-bottom: 25px;
+        }
+
+        .footer-main h3 {
+            font-size: 1.5rem;
+            color: #ff8c00;
+            margin-bottom: 10px;
+        }
+
+        .footer-main p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .footer-address {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .footer-contact {
+            margin-top: 30px;
+        }
+
+        .footer-contact h4 {
+            font-size: 1.2rem;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: #ff8c00;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 140, 0, 0.1);
+            padding-top: 20px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ff8c00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tablet and Desktop - Min-Width Media Queries */
+        @media (min-width: 768px) {
+            .navbar .logo {
+                font-size: 1.5rem;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            .nav-links {
+                position: static;
+                width: auto;
+                max-width: none;
+                height: auto;
+                background: transparent;
+                flex-direction: row;
+                gap: 2rem;
+                padding: 0;
+                border-left: none;
+            }
+
+            .nav-links li {
+                padding: 0;
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+            }
+
+            .hero {
+                padding: 120px 20px 80px;
+            }
+
+            .hero-content {
+                flex-direction: row;
+                gap: 60px;
+                align-items: center;
+            }
+
+            .hero-text {
+                flex: 1;
+                text-align: left;
+            }
+
+            .hero-text h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+
+            .hero-image {
+                flex: 1;
+            }
+
+            .trainer-photo {
+                max-width: 450px;
+            }
+
+            section {
+                padding: 100px 20px;
+            }
+
+            .section-header {
+                margin-bottom: 60px;
+            }
+
+            .section-label {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+
+            .section-title {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            .about-content {
+                flex-direction: row;
+                gap: 60px;
+            }
+
+            .about-card {
+                flex: 1;
+                padding: 40px;
+            }
+
+            .about-card:hover {
+                border-color: #ff8c00;
+                box-shadow: 0 10px 40px rgba(255, 140, 0, 0.2);
+                transform: translateY(-5px);
+            }
+
+            .about-card h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+
+            .about-card p,
+            .about-card ul li {
+                font-size: 1rem;
+            }
+
+            .achievements-grid {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-top: 60px;
+            }
+
+            .achievement-card {
+                flex: 1;
+                min-width: 280px;
+                padding: 40px;
+            }
+
+            .achievement-card:hover {
+                transform: translateY(-10px);
+                border-color: #ff8c00;
+                box-shadow: 0 15px 50px rgba(255, 140, 0, 0.3);
+            }
+
+            .achievement-card:hover::before {
+                opacity: 1;
+            }
+
+            .achievement-card h3 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+
+            .achievement-card p {
+                font-size: 1rem;
+            }
+
+            .badge {
+                font-size: 0.85rem;
+            }
+
+            .cert-category {
+                margin-bottom: 50px;
+            }
+
+            .cert-category h3 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+                padding-bottom: 15px;
+            }
+
+            .cert-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 20px;
+            }
+
+            .cert-item {
+                padding: 20px;
+            }
+
+            .cert-item:hover {
+                border-color: #ff8c00;
+                background: rgba(255, 140, 0, 0.1);
+                transform: translateX(5px);
+            }
+
+            .cert-name {
+                font-size: 1rem;
+            }
+
+            .quote-box {
+                max-width: 900px;
+                margin: 60px auto 0;
+                padding: 60px 40px;
+            }
+
+            .quote-box::before {
+                top: -20px;
+                left: 40px;
+                font-size: 8rem;
+            }
+
+            .quote-text {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+
+            .quote-author {
+                font-size: 1.1rem;
+            }
+
+            .philosophy-points {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin-top: 60px;
+            }
+
+            .philosophy-card {
+                padding: 30px;
+            }
+
+            .philosophy-card:hover {
+                border-color: #ff8c00;
+                transform: translateY(-5px);
+            }
+
+            .philosophy-card h4 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+
+            .philosophy-card p {
+                font-size: 1rem;
+            }
+
+            .why-choose-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 30px;
+            }
+
+            .academy-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .academy-intro {
+                font-size: 1.1rem;
+            }
+
+            footer {
+                padding: 40px 20px;
+            }
+
+            .footer-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                text-align: left;
+            }
+        }
+
+        /* Large Desktop */
+        @media (min-width: 1200px) {
+            .achievements-grid {
+                flex-wrap: nowrap;
+            }
+
+            .achievement-card {
+                flex: 1;
+                min-width: auto;
+            }
+        }
+
+        /* Prevent horizontal scroll */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">TechVaaganza</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="trainer.html">Trainer</a></li>
+                <li><a href="index.html#register">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Meet Our Trainer</h1>
+                <h2>Avinash Reddy Thipparthi</h2>
+                <p>
+                    Industry-Driven Cloud and DevOps Architect with 14+ years of real-world experience. 
+                    Transforming learners into job-ready professionals through hands-on, practical training 
+                    that mirrors real production environments.
+                </p>
+            </div>
+            <div class="hero-image">
+                <div class="trainer-photo">
+                    <img src="./images/Trainee image.png" alt="Avinash Reddy Thipparthi - Cloud and DevOps Trainer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Trainer Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">About</span>
+                <h2 class="section-title">Your Learning Guide</h2>
+                <p class="section-subtitle">
+                    Learn from a proven industry expert dedicated to your success
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>Professional Expertise</h3>
+                    <p>
+                        Avinash brings 14+ years of hands-on experience working with Fortune 500 companies and 
+                        leading cloud transformation projects. His expertise spans across AWS, Azure, GCP, 
+                        Kubernetes, DevOps, DevSecOps, and AI-enabled engineering.
+                    </p>
+                    <ul>
+                        <li>Cloud and DevOps Architecture</li>
+                        <li>Container Orchestration (Kubernetes)</li>
+                        <li>CI/CD Pipeline Design</li>
+                        <li>Cloud Security and DevSecOps</li>
+                        <li>Infrastructure as Code (IaC)</li>
+                        <li>Microservices and Cloud-Native Development</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h3>Teaching Philosophy</h3>
+                    <p>
+                        At Aviz Academy, learning goes beyond traditional classroom models. Avinash's 
+                        student-centric approach focuses on practical, real-world training that replicates 
+                        actual IT environments.
+                    </p>
+                    <ul>
+                        <li>Hands-on labs and scenario-driven exercises</li>
+                        <li>Real project insights and best practices</li>
+                        <li>Personalized mentorship and feedback</li>
+                        <li>Interview preparation and career guidance</li>
+                        <li>Production-grade tools and workflows</li>
+                        <li>Continuous learning with industry experts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Recognition</span>
+                <h2 class="section-title">Professional Achievements</h2>
+                <p class="section-subtitle">
+                    Honored for excellence, innovation, and impact in the Cloud and DevOps ecosystem
+                </p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3>Indian Iconic Cloud Master 2025</h3>
+                    <p>
+                        Honored as one of India's leading cloud technology professionals, recognizing 
+                        excellence, innovation, and impact in the Cloud and DevOps ecosystem.
+                    </p>
+                    <span class="badge">Award Winner</span>
+                </div>
+                <div class="achievement-card">
+                    <h3>AWS Community Builder</h3>
+                    <p>
+                        Recognized for active contributions in cloud education, community enablement, 
+                        and thought leadership within the AWS ecosystem.
+                    </p>
+                    <span class="badge">Community Leader</span>
+                </div>
+                <div class="achievement-card">
+                    <h3>Docker Captain</h3>
+                    <p>
+                        A prestigious global title awarded to top practitioners and educators in containerization, 
+                        reflecting deep technical expertise and community leadership.
+                    </p>
+                    <span class="badge">Global Recognition</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Credentials</span>
+                <h2 class="section-title">Industry Certifications</h2>
+                <p class="section-subtitle">
+                    Multiple industry-recognized certifications demonstrating mastery across cloud, DevOps, 
+                    containers, automation, and cloud-native technologies
+                </p>
+            </div>
+
+            <div class="cert-category">
+                <h3>AWS Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <span class="cert-name">AWS Certified Solutions Architect - Professional</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">AWS Certified Machine Learning - Specialty</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">AWS Certified DevOps Professional</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">AWS Certified CloudOps Admin</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">AWS Certified Solutions Architect - Associate</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">AWS Certified Cloud Practitioner</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">AWS Security Specialist</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-category">
+                <h3>Multi-Cloud and Enterprise Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <span class="cert-name">Kubernetes Certified Professional</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">Microsoft Azure Certified</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">Google Cloud (GCP) Certified</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-name">Red Hat Certified Professional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Teaching Approach</span>
+                <h2 class="section-title">Our Approach to Training</h2>
+                <p class="section-subtitle">
+                    Six core principles that drive our hands-on, industry-aligned Cloud and DevOps education
+                </p>
+            </div>
+
+            <div class="philosophy-points">
+                <div class="philosophy-card">
+                    <h4>Hands-On First Learning</h4>
+                    <p>
+                        We prioritize real-time labs, scenario-driven exercises, and project-based tasks over theory-heavy instruction. Every concept is practiced, validated, and applied in environments that reflect real-world IT workflows.
+                    </p>
+                </div>
+                <div class="philosophy-card">
+                    <h4>Industry Expert Collaboration</h4>
+                    <p>
+                        Our curriculum is continuously shaped by cloud architects, DevOps engineers, and market practitioners. Learners gain exposure to real project insights, best practices, and industry expectations.
+                    </p>
+                </div>
+                <div class="philosophy-card">
+                    <h4>Real-World Readiness</h4>
+                    <p>
+                        We don't just teach tools - we train learners to think and work like IT professionals. Assignments, challenges, and capstone projects prepare students to step into production environments with confidence.
+                    </p>
+                </div>
+                <div class="philosophy-card">
+                    <h4>Student-Centric Approach</h4>
+                    <p>
+                        Small cohorts, personalized feedback, structured mentoring, and productivity-focused evaluations ensure that each learner receives clear guidance and steady progress throughout their journey.
+                    </p>
+                </div>
+                <div class="philosophy-card">
+                    <h4>Up-to-Date, Market-Driven Curriculum</h4>
+                    <p>
+                        Technology evolves quickly, and so do we. Our programs are frequently updated to include the latest cloud services, automation practices, DevSecOps methods, Kubernetes advancements, and AI-driven engineering trends.
+                    </p>
+                </div>
+                <div class="philosophy-card">
+                    <h4>Strong Career Orientation</h4>
+                    <p>
+                        Beyond technical training, we emphasize interview preparation, resume building, real-time troubleshooting skills, and practical exposure - helping learners transition smoothly into industry roles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                <p class="quote-text">
+                    We don't just teach tools - we train learners to think and work like IT professionals. 
+                    Every concept is practiced, validated, and applied in environments that reflect real-world IT workflows.
+                </p>
+                <p class="quote-author">- Avinash Reddy Thipparthi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">Why Choose Aviz Academy</h2>
+                <p class="section-subtitle">
+                    Five compelling reasons to train with us for your Cloud and DevOps career
+                </p>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-card">
+                    <h3>Learn from a Proven Industry Expert</h3>
+                    <p>
+                        Training is led by a Cloud and DevOps Architect with 14+ years of real-world experience. 
+                        You gain insights, practices, and problem-solving approaches used in actual production environments.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <h3>Real-World, Practical Training</h3>
+                    <p>
+                        Our sessions go far beyond theory. Every topic includes hands-on labs, scenario-based exercises, 
+                        and project-driven challenges that reflect what engineers do in real IT teams.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <h3>Personalised Mentorship and Guidance</h3>
+                    <p>
+                        You get direct access to your trainer for doubt resolution, code reviews, and real-time feedback. 
+                        This ensures faster learning, stronger fundamentals, and better job readiness.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <h3>Build Confidence Through Real Projects</h3>
+                    <p>
+                        With guided assignments and industry-style tasks, you develop a portfolio, practical confidence, 
+                        and the mindset needed to perform effectively in live cloud and DevOps environments.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <h3>Training Aligned with Employer Expectations</h3>
+                    <p>
+                        Courses are designed around industry requirements - automation, cloud-native workflows, CI/CD, 
+                        Kubernetes, DevSecOps, troubleshooting, real-time scenarios - equipping you with the skills companies actively look for.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Aviz Academy Section -->
+    <section class="about-academy-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">About Aviz Academy</span>
+                <h2 class="section-title">Who Are We?</h2>
+            </div>
+            <div class="academy-content">
+                <p class="academy-intro">
+                    Aviz Academy is a modern learning institute established with a clear purpose: to redefine the way 
+                    Cloud and DevOps training is delivered in the industry. We go beyond traditional classroom models 
+                    by replacing theory-heavy instruction with hands-on, practical, real-world learning experiences.
+                </p>
+                <div class="academy-grid">
+                    <div class="academy-card">
+                        <h3>Our Mission</h3>
+                        <p>
+                            To empower individuals with cutting-edge technical skills across Cloud Computing, DevOps, 
+                            DevSecOps, Kubernetes, Automation, and AI-enabled engineering. We deliver practical, real-world 
+                            training that mirrors industry environments and build job-ready capabilities through exercises, 
+                            labs, and projects.
+                        </p>
+                    </div>
+                    <div class="academy-card">
+                        <h3>Our Vision</h3>
+                        <p>
+                            To be recognized as a leading global provider of hands-on Cloud and DevOps education, known for 
+                            transforming learners into capable, confident, and industry-ready professionals. We aim to set a 
+                            benchmark in the training ecosystem by delivering practical, outcome-driven, and deeply engaging 
+                            learning experiences that support long-term career success.
+                        </p>
+                    </div>
+                </div>
+                <p class="academy-commitment">
+                    Our programs are designed to replicate real IT environments, enabling learners to work with production-grade 
+                    tools, solve scenario-based challenges, and build confidence through continuous practical exercises. At our core, 
+                    we are a student-centric organization committed to shaping professionals who can contribute effectively from day 
+                    one in Cloud, DevOps, and modern IT roles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3>Aviz Academy</h3>
+                    <p>Modern Cloud and DevOps Training Institute</p>
+                    <p class="footer-address">
+                        102, Plot 496, Mathrusree Nagar<br>
+                        Miyapur, Hyderabad, Telangana 500049
+                    </p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p>+91 79977 77597</p>
+                    <p><a href="http://www.avizacademy.com" target="_blank">www.avizacademy.com</a></p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/avizway" target="_blank" title="Twitter">@avizway</a>
+                        <a href="https://linkedin.com/in/avizway" target="_blank" title="LinkedIn">/in/avizway</a>
+                        <a href="https://instagram.com/aviz_academy" target="_blank" title="Instagram">aviz_academy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechVaaganza - Aviz Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const menuLinks = navLinks.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
