@@ -812,75 +812,57 @@
             margin: 0 auto;
         }
 
-        /* Image Cards Grid - Horizontal Scrolling Carousel */
+        /* Image Cards Grid - Simple Grid Layout */
         .tech-images-grid-wrapper {
             position: relative;
             width: 100%;
-            overflow: hidden;
             padding: 20px 0;
         }
 
         .tech-images-grid {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            animation: tech-auto-scroll 40s linear infinite;
-            width: max-content;
-        }
-
-        .tech-images-grid:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes tech-auto-scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .tech-image-card {
             position: relative;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             background: rgba(20, 20, 20, 0.8);
-            border: 1px solid rgba(255, 140, 0, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            flex-shrink: 0;
-            width: 280px;
+            border: 2px solid rgba(255, 140, 0, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .tech-image-card:hover {
             transform: translateY(-10px);
-            border-color: rgba(255, 140, 0, 0.6);
-            box-shadow: 0 20px 60px rgba(255, 140, 0, 0.3);
+            border-color: #ff8c00;
+            box-shadow: 0 15px 40px rgba(255, 140, 0, 0.4);
         }
 
         .tech-image-wrapper {
-            position: relative;
-            padding-top: 150%;
+            width: 100%;
+            height: 300px;
             overflow: hidden;
-        }
-
-        .tech-trainer-card .tech-image-wrapper {
-            padding-top: 130%;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .tech-image-wrapper img {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s;
+            object-fit: contain;
+            object-position: center;
+            transition: transform 0.3s ease;
         }
 
         .tech-image-card:hover .tech-image-wrapper img {
-            transform: scale(1.15);
+            transform: scale(1.05);
         }
 
         .tech-image-overlay {
@@ -938,6 +920,13 @@
         }
 
         /* Responsive */
+        @media (max-width: 992px) {
+            .tech-images-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+
         @media (max-width: 768px) {
             .tech-hero-title {
                 font-size: 3.5rem;
@@ -951,11 +940,14 @@
                 font-size: 2.5rem;
             }
 
-            .tech-image-card {
-                width: 220px;
+            .tech-image-wrapper {
+                height: 250px;
             }
+        }
 
+        @media (max-width: 576px) {
             .tech-images-grid {
+                grid-template-columns: 1fr;
                 gap: 20px;
             }
         }
@@ -974,12 +966,8 @@
                 font-size: 1rem;
             }
 
-            .tech-image-card {
-                width: 200px;
-            }
-
-            .tech-images-grid {
-                gap: 15px;
+            .tech-section-heading {
+                font-size: 32px;
             }
         }
 
@@ -2435,7 +2423,7 @@
             <div class="tech-hero-content">
                 <div class="tech-hero-badge">3rd Edition</div>
                 <h1 class="tech-hero-title">TechVaaganza</h1>
-                <p class="tech-hero-tagline">An AWS-Based Technical Event</p>
+                <p class="tech-hero-tagline">Department Of Computer Science Flagship Event</p>
                 <div class="tech-hero-college">
                     <p>Vaagdevi College of Engineering</p>
                 </div>
@@ -2465,164 +2453,71 @@
                 <div class="tech-images-grid-wrapper">
                     <div class="tech-images-grid" id="techImagesGrid">
 
-                        <!-- Guest/Faculty Card 1 -->
-                        <div class="tech-image-card tech-trainer-card">
+                        <!-- Row 1 - Card 1 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="./images/Pricipal_faculty.jpeg" alt="Principal">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Principal</div>
+                                <div class="tech-image-role">Principal</div>
+                            </div>
+                        </div>
+
+                        <!-- Row 1 - Card 2 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="./images/Vice-Principal_faculty.jpeg" alt="Vice Principal">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Vice Principal</div>
+                                <div class="tech-image-role">Vice Principal</div>
+                            </div>
+                        </div>
+
+                        <!-- Row 1 - Card 3 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="./images/Hod_faculty.jpeg" alt="HOD CSE">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">HOD - CSE</div>
+                                <div class="tech-image-role">Head of Department</div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 - Card 4 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="./images/Aravind_faculty.jpeg" alt="Aravind">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Aravind</div>
+                                <div class="tech-image-role">Faculty</div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 - Card 5 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="./images/Shekar_faculty.jpeg" alt="Shekar">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Shekar</div>
+                                <div class="tech-image-role">Faculty</div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 - Card 6 -->
+                        <div class="tech-image-card">
                             <div class="tech-image-wrapper">
                                 <img src="./images/Trainee image.png" alt="Avinash Reddy Thipparthi">
                             </div>
+                            
                             <div class="tech-image-overlay">
                                 <div class="tech-image-name">Avinash Reddy Thipparthi</div>
                                 <div class="tech-image-role">Cloud & DevOps Architect</div>
                                 <a href="trainer.html" class="tech-know-more tech-know-more-mobile">Know More</a>
-                            </div>
-                        </div>
-
-                        <!-- Guest/Faculty Card 2 -->
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
-                                    alt="Guest 2">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Prof. Priya Sharma</div>
-                                <div class="tech-image-role">AWS Specialist</div>
-                            </div>
-                        </div>
-
-                        <!-- Guest/Faculty Card 3 -->
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600"
-                                    alt="Guest 3">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Mr. Arjun Reddy</div>
-                                <div class="tech-image-role">Tech Lead</div>
-                            </div>
-                        </div>
-
-                        <!-- Guest/Faculty Card 4 -->
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600"
-                                    alt="Guest 4">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Dr. Sneha Patel</div>
-                                <div class="tech-image-role">HOD - CSE</div>
-                            </div>
-                        </div>
-
-                        <!-- Guest/Faculty Card 5 -->
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600"
-                                    alt="Guest 5">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Mr. Vikram Singh</div>
-                                <div class="tech-image-role">Cloud Architect</div>
-                            </div>
-                        </div>
-
-                        <!-- Guest/Faculty Card 6 -->
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600"
-                                    alt="Guest 6">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Ms. Ananya Desai</div>
-                                <div class="tech-image-role">Industry Expert</div>
-                            </div>
-                        </div>
-
-                        <!-- Duplicate cards for seamless loop -->
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600"
-                                    alt="Guest 1">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Dr. Rajesh Kumar</div>
-                                <div class="tech-image-role">Chief Guest</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
-                                    alt="Guest 2">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Prof. Priya Sharma</div>
-                                <div class="tech-image-role">AWS Specialist</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600"
-                                    alt="Guest 3">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Mr. Arjun Reddy</div>
-                                <div class="tech-image-role">Tech Lead</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600"
-                                    alt="Guest 4">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Dr. Sneha Patel</div>
-                                <div class="tech-image-role">HOD - CSE</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600"
-                                    alt="Guest 5">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Mr. Vikram Singh</div>
-                                <div class="tech-image-role">Cloud Architect</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600"
-                                    alt="Guest 6">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Ms. Ananya Desai</div>
-                                <div class="tech-image-role">Industry Expert</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600"
-                                    alt="Guest 7">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Dr. Karthik Menon</div>
-                                <div class="tech-image-role">Dean - Engineering</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-image-card">
-                            <div class="tech-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600"
-                                    alt="Guest 8">
-                            </div>
-                            <div class="tech-image-overlay">
-                                <div class="tech-image-name">Ms. Divya Rao</div>
-                                <div class="tech-image-role">AI Researcher</div>
                             </div>
                         </div>
 
@@ -2633,6 +2528,7 @@
         </div>
 
     </section>
+
 
 
 
@@ -3370,7 +3266,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>TechVaaganza</h3>
-                    <p>An AWS-Based Technical Event</p>
+                    <p>Department Of Computer Science Flagship Event</p>
                     <p class="footer-college">Vaagdevi College of Engineering</p>
                 </div>
                 <div class="footer-section">
