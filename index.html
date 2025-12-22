@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
             position: relative;
             padding: 100px 0;
             overflow: hidden;
-            
+
 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -33,8 +34,13 @@
         }
 
         @keyframes vdc-rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Grid Pattern */
@@ -45,7 +51,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 linear-gradient(90deg, rgba(255, 140, 0, 0.02) 1px, transparent 1px),
                 linear-gradient(rgba(255, 140, 0, 0.02) 1px, transparent 1px);
             background-size: 40px 40px;
@@ -306,10 +312,12 @@
                 width: 350px;
                 height: 280px;
             }
+
             .vdc-card[data-position="-1"],
             .vdc-card[data-position="1"] {
                 transform: translateX(-250px) scale(0.85) rotateY(20deg);
             }
+
             .vdc-card[data-position="1"] {
                 transform: translateX(250px) scale(0.85) rotateY(-20deg);
             }
@@ -320,38 +328,38 @@
                 padding: 60px 0;
                 overflow: hidden;
             }
-            
+
             .vdc-title {
                 font-size: 2rem;
             }
-            
+
             .vdc-subtitle {
                 font-size: 0.9rem;
                 padding: 0 20px;
             }
-            
+
             .vdc-nav {
                 padding: 0 10px;
                 gap: 8px;
             }
-            
+
             .vdc-nav-btn {
                 padding: 8px 18px;
                 font-size: 0.8rem;
             }
-            
+
             .vdc-carousel-wrapper {
                 height: 350px;
                 overflow: hidden;
                 width: 100%;
                 max-width: 100vw;
             }
-            
+
             .vdc-carousel-track {
                 width: 100%;
                 overflow: visible;
             }
-            
+
             .vdc-card {
                 width: 85%;
                 max-width: 320px;
@@ -361,7 +369,7 @@
                 left: 50%;
                 margin-left: -42.5%;
             }
-            
+
             /* Mobile: One card at a time - full width approach */
             .vdc-card[data-position="0"] {
                 z-index: 5;
@@ -369,19 +377,19 @@
                 opacity: 1;
                 filter: brightness(1.2);
             }
-            
+
             .vdc-card[data-position="-1"] {
                 z-index: 4;
                 transform: translateX(-100%) scale(0.85) rotateY(15deg);
                 opacity: 0.4;
             }
-            
+
             .vdc-card[data-position="1"] {
                 z-index: 4;
                 transform: translateX(100%) scale(0.85) rotateY(-15deg);
                 opacity: 0.4;
             }
-            
+
             .vdc-card[data-position="-2"],
             .vdc-card[data-position="2"] {
                 opacity: 0;
@@ -389,38 +397,40 @@
                 transform: translateX(0) scale(0.5);
                 visibility: hidden;
             }
-            
+
             .vdc-arrow {
                 width: 45px;
                 height: 45px;
             }
-            
+
             .vdc-arrow-left {
                 left: 5%;
             }
-            
+
             .vdc-arrow-right {
-                right: 5%;\n            }
-            
+                right: 5%;
+                \n
+            }
+
             .vdc-arrow::before {
                 width: 12px;
                 height: 12px;
                 border-width: 2px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .vdc-title {
                 font-size: 1.8rem;
             }
-            
+
             .vdc-carousel-wrapper {
                 height: 280px;
                 overflow: hidden;
                 width: 100%;
                 max-width: 100vw;
             }
-            
+
             .vdc-card {
                 width: 90%;
                 max-width: 280px;
@@ -430,39 +440,39 @@
                 left: 50%;
                 margin-left: -45%;
             }
-            
+
             .vdc-card[data-position="0"] {
                 z-index: 5;
                 transform: translateX(0) scale(1) rotateY(0deg);
                 opacity: 1;
                 filter: brightness(1.2);
             }
-            
+
             .vdc-card[data-position="-1"] {
                 transform: translateX(-100%) scale(0.8) rotateY(10deg);
                 opacity: 0.3;
             }
-            
+
             .vdc-card[data-position="1"] {
                 transform: translateX(100%) scale(0.8) rotateY(-10deg);
                 opacity: 0.3;
             }
-            
+
             .vdc-card[data-position="-2"],
             .vdc-card[data-position="2"] {
                 opacity: 0;
                 visibility: hidden;
             }
-            
+
             .vdc-arrow {
                 width: 40px;
                 height: 40px;
             }
-            
+
             .vdc-arrow-left {
                 left: 2%;
             }
-            
+
             .vdc-arrow-right {
                 right: 2%;
             }
@@ -474,6 +484,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -540,7 +551,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 linear-gradient(90deg, rgba(255, 140, 0, 0.03) 1px, transparent 1px),
                 linear-gradient(rgba(255, 140, 0, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
@@ -548,8 +559,13 @@
         }
 
         @keyframes tech-grid-move {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
         }
 
         /* Hero Content */
@@ -571,6 +587,7 @@
                 opacity: 0;
                 transform: translate(-50%, -40%);
             }
+
             to {
                 opacity: 1;
                 transform: translate(-50%, -50%);
@@ -595,8 +612,15 @@
         }
 
         @keyframes tech-glow-pulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(255, 140, 0, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(255, 140, 0, 0.6); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(255, 140, 0, 0.6);
+            }
         }
 
         .tech-hero-title {
@@ -693,13 +717,29 @@
         }
 
         @keyframes tech-scroll-bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
         }
 
         @keyframes tech-scroll-dot {
-            0%, 100% { opacity: 0; top: 10px; }
-            50% { opacity: 1; top: 25px; }
+
+            0%,
+            100% {
+                opacity: 0;
+                top: 10px;
+            }
+
+            50% {
+                opacity: 1;
+                top: 25px;
+            }
         }
 
         /* Images Section */
@@ -712,7 +752,7 @@
             transform: translateY(100px);
             transition: all 1.2s ease-out;
         }
-        
+
         .tech-images-section.tech-slide-in {
             opacity: 1;
             transform: translateY(0);
@@ -795,6 +835,7 @@
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-50%);
             }
@@ -901,19 +942,19 @@
             .tech-hero-title {
                 font-size: 3.5rem;
             }
-            
+
             .tech-hero-tagline {
                 font-size: 1.2rem;
             }
-            
+
             .tech-section-heading {
                 font-size: 2.5rem;
             }
-            
+
             .tech-image-card {
                 width: 220px;
             }
-            
+
             .tech-images-grid {
                 gap: 20px;
             }
@@ -923,26 +964,26 @@
             .tech-hero-title {
                 font-size: 2.5rem;
             }
-            
+
             .tech-hero-tagline {
                 font-size: 1rem;
             }
-            
+
             .tech-btn-primary {
                 padding: 15px 35px;
                 font-size: 1rem;
             }
-            
+
             .tech-image-card {
                 width: 200px;
             }
-            
+
             .tech-images-grid {
                 gap: 15px;
             }
         }
 
-         /* ISOLATED TEAM MEMBERS SECTION STYLES */
+        /* ISOLATED TEAM MEMBERS SECTION STYLES */
         #team-members-auto-section {
             position: relative;
             background: #0a0a0a;
@@ -1186,10 +1227,12 @@
                 width: 350px;
                 height: 280px;
             }
+
             .vdc-card[data-position="-1"],
             .vdc-card[data-position="1"] {
                 transform: translateX(-250px) scale(0.85) rotateY(20deg);
             }
+
             .vdc-card[data-position="1"] {
                 transform: translateX(250px) scale(0.85) rotateY(-20deg);
             }
@@ -1200,38 +1243,38 @@
                 padding: 60px 0;
                 overflow: hidden;
             }
-            
+
             .vdc-title {
                 font-size: 2rem;
             }
-            
+
             .vdc-subtitle {
                 font-size: 0.9rem;
                 padding: 0 20px;
             }
-            
+
             .vdc-nav {
                 padding: 0 10px;
                 gap: 8px;
             }
-            
+
             .vdc-nav-btn {
                 padding: 8px 18px;
                 font-size: 0.8rem;
             }
-            
+
             .vdc-carousel-wrapper {
                 height: 350px;
                 overflow: hidden;
                 width: 100%;
                 max-width: 100vw;
             }
-            
+
             .vdc-carousel-track {
                 width: 100%;
                 overflow: visible;
             }
-            
+
             .vdc-card {
                 width: 85%;
                 max-width: 320px;
@@ -1241,7 +1284,7 @@
                 left: 50%;
                 margin-left: -42.5%;
             }
-            
+
             /* Mobile: One card at a time - full width approach */
             .vdc-card[data-position="0"] {
                 z-index: 5;
@@ -1249,19 +1292,19 @@
                 opacity: 1;
                 filter: brightness(1.2);
             }
-            
+
             .vdc-card[data-position="-1"] {
                 z-index: 4;
                 transform: translateX(-100%) scale(0.85) rotateY(15deg);
                 opacity: 0.4;
             }
-            
+
             .vdc-card[data-position="1"] {
                 z-index: 4;
                 transform: translateX(100%) scale(0.85) rotateY(-15deg);
                 opacity: 0.4;
             }
-            
+
             .vdc-card[data-position="-2"],
             .vdc-card[data-position="2"] {
                 opacity: 0;
@@ -1269,39 +1312,39 @@
                 transform: translateX(0) scale(0.5);
                 visibility: hidden;
             }
-            
+
             .vdc-arrow {
                 width: 45px;
                 height: 45px;
             }
-            
+
             .vdc-arrow-left {
                 left: 5%;
             }
-            
+
             .vdc-arrow-right {
                 right: 5%;
             }
-            
+
             .vdc-arrow::before {
                 width: 12px;
                 height: 12px;
                 border-width: 2px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .vdc-title {
                 font-size: 1.8rem;
             }
-            
+
             .vdc-carousel-wrapper {
                 height: 280px;
                 overflow: hidden;
                 width: 100%;
                 max-width: 100vw;
             }
-            
+
             .vdc-card {
                 width: 90%;
                 max-width: 280px;
@@ -1311,39 +1354,39 @@
                 left: 50%;
                 margin-left: -45%;
             }
-            
+
             .vdc-card[data-position="0"] {
                 z-index: 5;
                 transform: translateX(0) scale(1) rotateY(0deg);
                 opacity: 1;
                 filter: brightness(1.2);
             }
-            
+
             .vdc-card[data-position="-1"] {
                 transform: translateX(-100%) scale(0.8) rotateY(10deg);
                 opacity: 0.3;
             }
-            
+
             .vdc-card[data-position="1"] {
                 transform: translateX(100%) scale(0.8) rotateY(-10deg);
                 opacity: 0.3;
             }
-            
+
             .vdc-card[data-position="-2"],
             .vdc-card[data-position="2"] {
                 opacity: 0;
                 visibility: hidden;
             }
-            
+
             .vdc-arrow {
                 width: 40px;
                 height: 40px;
             }
-            
+
             .vdc-arrow-left {
                 left: 2%;
             }
-            
+
             .vdc-arrow-right {
                 right: 2%;
             }
@@ -1355,6 +1398,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1366,7 +1410,7 @@
         }
 
 
-         /* ISOLATED TEAM MEMBERS SECTION STYLES */
+        /* ISOLATED TEAM MEMBERS SECTION STYLES */
         #team-members-auto-section {
             position: relative;
             background: #0a0a0a;
@@ -1447,6 +1491,7 @@
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-50%);
             }
@@ -1604,6 +1649,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1618,7 +1664,7 @@
 
 
 
-         /* Card Section Styles - Isolated with specific IDs */
+        /* Card Section Styles - Isolated with specific IDs */
         #hero-cards-section {
             display: flex;
             flex-direction: column;
@@ -1845,6 +1891,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -2009,7 +2056,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
+            background-image:
                 linear-gradient(90deg, rgba(255, 102, 0, 0.03) 1px, transparent 1px),
                 linear-gradient(rgba(255, 102, 0, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
@@ -2017,8 +2064,13 @@
         }
 
         @keyframes gridMove {
-            0% { background-position: 0 0; }
-            100% { background-position: 50px 50px; }
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 50px 50px;
+            }
         }
 
         /* Glowing Orbs Background */
@@ -2030,13 +2082,20 @@
             width: 200%;
             height: 200%;
             background: radial-gradient(circle at 20% 50%, rgba(255, 102, 0, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 153, 68, 0.06) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 153, 68, 0.06) 0%, transparent 50%);
             animation: orbFloat 15s ease-in-out infinite;
         }
 
         @keyframes orbFloat {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(30px, -30px) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(30px, -30px) rotate(180deg);
+            }
         }
 
         /* Section Header */
@@ -2102,12 +2161,12 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: linear-gradient(180deg, 
-                transparent 0%, 
-                #ff6600 15%, 
-                #ff9944 50%, 
-                #ff6600 85%, 
-                transparent 100%);
+            background: linear-gradient(180deg,
+                    transparent 0%,
+                    #ff6600 15%,
+                    #ff9944 50%,
+                    #ff6600 85%,
+                    transparent 100%);
             transform: translateX(-50%);
             display: none;
         }
@@ -2127,15 +2186,24 @@
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .event-timeline-item:nth-child(1) { animation-delay: 0.2s; }
-        .event-timeline-item:nth-child(2) { animation-delay: 0.4s; }
-        .event-timeline-item:nth-child(3) { animation-delay: 0.6s; }
+        .event-timeline-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .event-timeline-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .event-timeline-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
 
         /* Timeline Dot */
         .event-timeline-dot {
@@ -2150,8 +2218,8 @@
             padding: 20px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7),
-                        0 0 0 1px rgba(255, 102, 0, 0.15) inset,
-                        0 5px 20px rgba(255, 102, 0, 0.1);
+                0 0 0 1px rgba(255, 102, 0, 0.15) inset,
+                0 5px 20px rgba(255, 102, 0, 0.1);
             position: relative;
             overflow: hidden;
             -webkit-backdrop-filter: blur(15px);
@@ -2177,8 +2245,8 @@
         .event-timeline-card:hover {
             border-color: #ff8833;
             box-shadow: 0 25px 70px rgba(255, 102, 0, 0.35),
-                        0 0 0 1px rgba(255, 102, 0, 0.5) inset,
-                        0 10px 30px rgba(255, 102, 0, 0.2);
+                0 0 0 1px rgba(255, 102, 0, 0.5) inset,
+                0 10px 30px rgba(255, 102, 0, 0.2);
             transform: translateY(-12px) scale(1.02);
         }
 
@@ -2193,7 +2261,7 @@
             font-weight: 800;
             margin-bottom: 18px;
             box-shadow: 0 6px 20px rgba(255, 102, 0, 0.45),
-                        0 2px 8px rgba(255, 153, 0, 0.3);
+                0 2px 8px rgba(255, 153, 0, 0.3);
             letter-spacing: 1px;
             text-transform: uppercase;
         }
@@ -2346,333 +2414,350 @@
         }
     </style>
 </head>
-<body>
-   
-<!-- ISOLATED HERO PARALLAX SECTION -->
-<section id="tech-hero-parallax-section">
-    
-    <!-- Hero Video Section -->
-    <div class="tech-hero-video-wrapper" id="techHeroWrapper">
-        <!-- Replace with your video URL -->
-        <video class="tech-hero-video-bg" id="techHeroVideo" autoplay muted loop playsinline>
-            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
-        </video>
-        
-        <div class="tech-hero-overlay"></div>
-        
-        <div class="tech-hero-content">
-            <div class="tech-hero-badge">3rd Edition</div>
-            <h1 class="tech-hero-title">TechVaaganza</h1>
-            <p class="tech-hero-tagline">An AWS-Based Technical Event</p>
-            <div class="tech-hero-college">
-                <p>Vaagdevi College of Engineering</p>
-            </div>
-            <div class="tech-hero-duration">
-                <span class="tech-duration-badge">3 Days</span>
-            </div>
-            <a href="#register" class="tech-btn-primary">Register Now</a>
-        </div>
-        
-        <div class="tech-scroll-indicator">
-            <span></span>
-        </div>
-    </div>
 
-    <!-- Images Section: Guests & Faculty -->
-    <div class="tech-images-section" id="techImagesSection">
-        <div class="container tech-images-container">
-            
-            <div class="tech-section-title" id="techSectionTitle">
-                <span class="tech-section-label">Meet The Team</span>
-                <h2 class="tech-section-heading">Guests & Faculty</h2>
-                <p class="tech-section-subheading">
-                    Industry experts and academic leaders guiding our journey
+<body>
+
+    <!-- ISOLATED HERO PARALLAX SECTION -->
+    <section id="tech-hero-parallax-section">
+
+        <!-- Hero Video Section -->
+        <div class="tech-hero-video-wrapper" id="techHeroWrapper">
+            <!-- Replace with your video URL -->
+            <!-- <video class="tech-hero-video-bg" id="techHeroVideo" autoplay muted loop playsinline>
+            <source src="images/bgvideo.mp4" type="video/mp4">
+        </video> -->
+            <video class="tech-hero-video-bg" id="techHeroVideo" autoplay muted loop playsinline>
+                <source src="images/bgvideo.mp4" type="video/mp4">
+            </video>
+
+            <div class="tech-hero-overlay"></div>
+
+            <div class="tech-hero-content">
+                <div class="tech-hero-badge">3rd Edition</div>
+                <h1 class="tech-hero-title">TechVaaganza</h1>
+                <p class="tech-hero-tagline">An AWS-Based Technical Event</p>
+                <div class="tech-hero-college">
+                    <p>Vaagdevi College of Engineering</p>
+                </div>
+                <div class="tech-hero-duration">
+                    <span class="tech-duration-badge">3 Days</span>
+                </div>
+                <a href="#register" class="tech-btn-primary">Register Now</a>
+            </div>
+
+            <div class="tech-scroll-indicator">
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Images Section: Guests & Faculty -->
+        <div class="tech-images-section" id="techImagesSection">
+            <div class="container tech-images-container">
+
+                <div class="tech-section-title" id="techSectionTitle">
+                    <span class="tech-section-label">Meet The Team</span>
+                    <h2 class="tech-section-heading">Guests & Faculty</h2>
+                    <p class="tech-section-subheading">
+                        Industry experts and academic leaders guiding our journey
+                    </p>
+                </div>
+
+                <div class="tech-images-grid-wrapper">
+                    <div class="tech-images-grid" id="techImagesGrid">
+
+                        <!-- Guest/Faculty Card 1 -->
+                        <div class="tech-image-card tech-trainer-card">
+                            <div class="tech-image-wrapper">
+                                <img src="./images/Trainee image.png" alt="Avinash Reddy Thipparthi">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Avinash Reddy Thipparthi</div>
+                                <div class="tech-image-role">Cloud & DevOps Architect</div>
+                                <a href="trainer.html" class="tech-know-more tech-know-more-mobile">Know More</a>
+                            </div>
+                        </div>
+
+                        <!-- Guest/Faculty Card 2 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
+                                    alt="Guest 2">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Prof. Priya Sharma</div>
+                                <div class="tech-image-role">AWS Specialist</div>
+                            </div>
+                        </div>
+
+                        <!-- Guest/Faculty Card 3 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600"
+                                    alt="Guest 3">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Mr. Arjun Reddy</div>
+                                <div class="tech-image-role">Tech Lead</div>
+                            </div>
+                        </div>
+
+                        <!-- Guest/Faculty Card 4 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600"
+                                    alt="Guest 4">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Dr. Sneha Patel</div>
+                                <div class="tech-image-role">HOD - CSE</div>
+                            </div>
+                        </div>
+
+                        <!-- Guest/Faculty Card 5 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600"
+                                    alt="Guest 5">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Mr. Vikram Singh</div>
+                                <div class="tech-image-role">Cloud Architect</div>
+                            </div>
+                        </div>
+
+                        <!-- Guest/Faculty Card 6 -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600"
+                                    alt="Guest 6">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Ms. Ananya Desai</div>
+                                <div class="tech-image-role">Industry Expert</div>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate cards for seamless loop -->
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600"
+                                    alt="Guest 1">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Dr. Rajesh Kumar</div>
+                                <div class="tech-image-role">Chief Guest</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
+                                    alt="Guest 2">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Prof. Priya Sharma</div>
+                                <div class="tech-image-role">AWS Specialist</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600"
+                                    alt="Guest 3">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Mr. Arjun Reddy</div>
+                                <div class="tech-image-role">Tech Lead</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600"
+                                    alt="Guest 4">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Dr. Sneha Patel</div>
+                                <div class="tech-image-role">HOD - CSE</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600"
+                                    alt="Guest 5">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Mr. Vikram Singh</div>
+                                <div class="tech-image-role">Cloud Architect</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600"
+                                    alt="Guest 6">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Ms. Ananya Desai</div>
+                                <div class="tech-image-role">Industry Expert</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600"
+                                    alt="Guest 7">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Dr. Karthik Menon</div>
+                                <div class="tech-image-role">Dean - Engineering</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-image-card">
+                            <div class="tech-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600"
+                                    alt="Guest 8">
+                            </div>
+                            <div class="tech-image-overlay">
+                                <div class="tech-image-name">Ms. Divya Rao</div>
+                                <div class="tech-image-role">AI Researcher</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--aboutus-->
+
+    <section id="visual-diary-carousel-section">
+        <div class="container vdc-container">
+
+            <!-- Header -->
+            <div class="vdc-header vdc-fade-in">
+                <span class="vdc-label">Gallery</span>
+                <h2 class="vdc-title">TechVaaganza Through the Years</h2>
+                <p class="vdc-subtitle">
+                    A glimpse into the innovation, energy, and moments from our previous TechVaaganza editions.
                 </p>
             </div>
 
-            <div class="tech-images-grid-wrapper">
-                <div class="tech-images-grid" id="techImagesGrid">
-                    
-                    <!-- Guest/Faculty Card 1 -->
-                    <div class="tech-image-card tech-trainer-card">
-                        <div class="tech-image-wrapper">
-                            <img src="./images/Trainee image.png" alt="Avinash Reddy Thipparthi">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Avinash Reddy Thipparthi</div>
-                            <div class="tech-image-role">Cloud & DevOps Architect</div>
-                            <a href="trainer.html" class="tech-know-more tech-know-more-mobile">Know More</a>
-                        </div>
+            <!-- Carousel -->
+            <div class="vdc-carousel-wrapper">
+                <div class="vdc-carousel-track" id="vdcCarouselTrack">
+                    <!-- Card 1 -->
+                    <div class="vdc-card" data-position="0">
+                        <img src="./images/img1.JPG" alt="TechVaaganza Event Highlights">
                     </div>
-
-                    <!-- Guest/Faculty Card 2 -->
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600" alt="Guest 2">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Prof. Priya Sharma</div>
-                            <div class="tech-image-role">AWS Specialist</div>
-                        </div>
+                    <!-- Card 2 -->
+                    <div class="vdc-card" data-position="1">
+                        <img src="./images/imgproblem.JPG" alt="TechVaaganza Workshop Moments">
                     </div>
-
-                    <!-- Guest/Faculty Card 3 -->
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600" alt="Guest 3">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Mr. Arjun Reddy</div>
-                            <div class="tech-image-role">Tech Lead</div>
-                        </div>
+                    <!-- Card 3 -->
+                    <div class="vdc-card" data-position="2">
+                        <img src="./images/img3.JPG" alt="TechVaaganza Student Activities">
                     </div>
-
-                    <!-- Guest/Faculty Card 4 -->
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600" alt="Guest 4">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Dr. Sneha Patel</div>
-                            <div class="tech-image-role">HOD - CSE</div>
-                        </div>
+                    <!-- Card 4 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img4.JPG" alt="TechVaaganza AWS Training Sessions">
                     </div>
-
-                    <!-- Guest/Faculty Card 5 -->
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Guest 5">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Mr. Vikram Singh</div>
-                            <div class="tech-image-role">Cloud Architect</div>
-                        </div>
+                    <!-- Card 5 -->
+                    <div class="vdc-card" data-position="-1">
+                        <img src="./images/img5.JPG" alt="TechVaaganza Hands-on Labs">
                     </div>
-
-                    <!-- Guest/Faculty Card 6 -->
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600" alt="Guest 6">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Ms. Ananya Desai</div>
-                            <div class="tech-image-role">Industry Expert</div>
-                        </div>
+                    <!-- Card 6 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img6.JPG" alt="TechVaaganza Event Highlights">
                     </div>
-
-                    <!-- Duplicate cards for seamless loop -->
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600" alt="Guest 1">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Dr. Rajesh Kumar</div>
-                            <div class="tech-image-role">Chief Guest</div>
-                        </div>
+                    <!-- Card 7 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img7.JPG" alt="TechVaaganza Workshop Moments">
                     </div>
-
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600" alt="Guest 2">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Prof. Priya Sharma</div>
-                            <div class="tech-image-role">AWS Specialist</div>
-                        </div>
+                    <!-- Card 8 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img8.JPG" alt="TechVaaganza Student Activities">
                     </div>
-
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600" alt="Guest 3">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Mr. Arjun Reddy</div>
-                            <div class="tech-image-role">Tech Lead</div>
-                        </div>
+                    <!-- Card 9 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img1.JPG" alt="TechVaaganza AWS Training Sessions">
                     </div>
-
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600" alt="Guest 4">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Dr. Sneha Patel</div>
-                            <div class="tech-image-role">HOD - CSE</div>
-                        </div>
+                    <!-- Card 10 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img10.JPG" alt="TechVaaganza Hands-on Labs">
                     </div>
-
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Guest 5">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Mr. Vikram Singh</div>
-                            <div class="tech-image-role">Cloud Architect</div>
-                        </div>
+                    <!-- Card 11 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img11.JPG" alt="TechVaaganza Event Highlights">
                     </div>
-
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600" alt="Guest 6">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Ms. Ananya Desai</div>
-                            <div class="tech-image-role">Industry Expert</div>
-                        </div>
+                    <!-- Card 12 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img12.JPG" alt="TechVaaganza Workshop Moments">
                     </div>
-
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600" alt="Guest 7">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Dr. Karthik Menon</div>
-                            <div class="tech-image-role">Dean - Engineering</div>
-                        </div>
+                    <!-- Card 13 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img13.JPG" alt="TechVaaganza Student Activities">
                     </div>
-
-                    <div class="tech-image-card">
-                        <div class="tech-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600" alt="Guest 8">
-                        </div>
-                        <div class="tech-image-overlay">
-                            <div class="tech-image-name">Ms. Divya Rao</div>
-                            <div class="tech-image-role">AI Researcher</div>
-                        </div>
+                    <!-- Card 14 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img14.JPG" alt="TechVaaganza AWS Training Sessions">
                     </div>
-
+                    <!-- Card 15 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img15.JPG" alt="TechVaaganza Hands-on Labs">
+                    </div>
+                    <!-- Card 16 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img16.JPG" alt="TechVaaganza Event Highlights">
+                    </div>
+                    <!-- Card 17 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img17.JPG" alt="TechVaaganza Workshop Moments">
+                    </div>
+                    <!-- Card 18 -->
+                    <div class="vdc-card" data-position="hidden">
+                        <img src="./images/img18.JPG" alt="TechVaaganza Student Activities">
+                    </div>
                 </div>
+
+                <!-- Navigation Arrows -->
+                <div class="vdc-arrow vdc-arrow-left" id="vdcArrowLeft"></div>
+                <div class="vdc-arrow vdc-arrow-right" id="vdcArrowRight"></div>
+            </div>
+
+            <!-- Indicators -->
+            <div class="vdc-indicators" id="vdcIndicators">
+                <div class="vdc-indicator active"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
+                <div class="vdc-indicator"></div>
             </div>
 
         </div>
-    </div>
-
-</section>
-
-
-
-
-
-<!--aboutus-->
-
-<section id="visual-diary-carousel-section">
-    <div class="container vdc-container">
-        
-        <!-- Header -->
-        <div class="vdc-header vdc-fade-in">
-            <span class="vdc-label">Gallery</span>
-            <h2 class="vdc-title">TechVaaganza Through the Years</h2>
-            <p class="vdc-subtitle">
-                A glimpse into the innovation, energy, and moments from our previous TechVaaganza editions.
-            </p>
-        </div>
-
-        <!-- Carousel -->
-        <div class="vdc-carousel-wrapper">
-            <div class="vdc-carousel-track" id="vdcCarouselTrack">
-                <!-- Card 1 -->
-                <div class="vdc-card" data-position="0">
-                    <img src="./images/img1.JPG" alt="TechVaaganza Event Highlights">
-                </div>
-                <!-- Card 2 -->
-                <div class="vdc-card" data-position="1">
-                    <img src="./images/imgproblem.JPG" alt="TechVaaganza Workshop Moments">
-                </div>
-                <!-- Card 3 -->
-                <div class="vdc-card" data-position="2">
-                    <img src="./images/img3.JPG" alt="TechVaaganza Student Activities">
-                </div>
-                <!-- Card 4 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img4.JPG" alt="TechVaaganza AWS Training Sessions">
-                </div>
-                <!-- Card 5 -->
-                <div class="vdc-card" data-position="-1">
-                    <img src="./images/img5.JPG" alt="TechVaaganza Hands-on Labs">
-                </div>
-                <!-- Card 6 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img6.JPG" alt="TechVaaganza Event Highlights">
-                </div>
-                <!-- Card 7 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img7.JPG" alt="TechVaaganza Workshop Moments">
-                </div>
-                <!-- Card 8 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img8.JPG" alt="TechVaaganza Student Activities">
-                </div>
-                <!-- Card 9 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img1.JPG" alt="TechVaaganza AWS Training Sessions">
-                </div>
-                <!-- Card 10 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img10.JPG" alt="TechVaaganza Hands-on Labs">
-                </div>
-                <!-- Card 11 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img11.JPG" alt="TechVaaganza Event Highlights">
-                </div>
-                <!-- Card 12 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img12.JPG" alt="TechVaaganza Workshop Moments">
-                </div>
-                <!-- Card 13 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img13.JPG" alt="TechVaaganza Student Activities">
-                </div>
-                <!-- Card 14 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img14.JPG" alt="TechVaaganza AWS Training Sessions">
-                </div>
-                <!-- Card 15 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img15.JPG" alt="TechVaaganza Hands-on Labs">
-                </div>
-                <!-- Card 16 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img16.JPG" alt="TechVaaganza Event Highlights">
-                </div>
-                <!-- Card 17 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img17.JPG" alt="TechVaaganza Workshop Moments">
-                </div>
-                <!-- Card 18 -->
-                <div class="vdc-card" data-position="hidden">
-                    <img src="./images/img18.JPG" alt="TechVaaganza Student Activities">
-                </div>
-            </div>
-
-            <!-- Navigation Arrows -->
-            <div class="vdc-arrow vdc-arrow-left" id="vdcArrowLeft"></div>
-            <div class="vdc-arrow vdc-arrow-right" id="vdcArrowRight"></div>
-        </div>
-
-        <!-- Indicators -->
-        <div class="vdc-indicators" id="vdcIndicators">
-            <div class="vdc-indicator active"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-            <div class="vdc-indicator"></div>
-        </div>
-
-    </div>
-</section>
+    </section>
 
 
     <!-- About Section -->
@@ -2760,461 +2845,502 @@
     </section>
 
     <!-- Timeline Section -->
-    <section >
-       <div class="event-timeline-wrapper">
-        <div class="event-timeline-container">
-            <!-- Animated particles -->
-            <div class="spiral-particles" id="particles"></div>
+    <section>
+        <div class="event-timeline-wrapper">
+            <div class="event-timeline-container">
+                <!-- Animated particles -->
+                <div class="spiral-particles" id="particles"></div>
 
-            <!-- Spiral path SVG -->
-            <svg class="spiral-path" viewBox="0 0 800 1400" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                    <linearGradient id="spiralGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#ff6600" stop-opacity="0.8" />
-                        <stop offset="50%" stop-color="#ff9944" stop-opacity="0.6" />
-                        <stop offset="100%" stop-color="#ff6600" stop-opacity="0.8" />
-                    </linearGradient>
-                </defs>
-                <path class="spiral-line" d="M 400 100 Q 450 300 400 500 Q 350 700 400 900 Q 450 1100 400 1300" />
-            </svg>
+                <!-- Spiral path SVG -->
+                <svg class="spiral-path" viewBox="0 0 800 1400" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="spiralGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ff6600" stop-opacity="0.8" />
+                            <stop offset="50%" stop-color="#ff9944" stop-opacity="0.6" />
+                            <stop offset="100%" stop-color="#ff6600" stop-opacity="0.8" />
+                        </linearGradient>
+                    </defs>
+                    <path class="spiral-line" d="M 400 100 Q 450 300 400 500 Q 350 700 400 900 Q 450 1100 400 1300" />
+                </svg>
 
-            <div class="event-timeline-header">
-                <h1 class="event-timeline-title">3-Day Event Timeline</h1>
-                <p class="event-timeline-subtitle">Your journey through AWS and cloud computing</p>
-            </div>
-
-            <div class="event-timeline-content">
-                <!-- Day 1 -->
-                <div class="event-timeline-item">
-                    <div class="event-timeline-dot"></div>
-                    <div class="event-timeline-card">
-                        <span class="event-timeline-day-badge">Day 1</span>
-                        <h2 class="event-timeline-card-title">Cloud & AWS Foundations + Portfolio Mindset</h2>
-                        <h3 class="event-timeline-card-subtitle">Building strong cloud fundamentals and a portfolio mindset</h3>
-                        <ul class="event-timeline-list">
-                            <li class="event-timeline-list-item">What is cloud computing and why it matters today</li>
-                            <li class="event-timeline-list-item">Traditional IT vs Cloud (cost, scalability, speed)</li>
-                            <li class="event-timeline-list-item">Cloud service models: IaaS, PaaS, SaaS</li>
-                            <li class="event-timeline-list-item">Public cloud overview & shared responsibility model</li>
-                            <li class="event-timeline-list-item">AWS global infrastructure: regions and availability zones</li>
-                            <li class="event-timeline-list-item">Core AWS services overview and AWS Free Tier</li>
-                            <li class="event-timeline-list-item">Building a cloud portfolio and testing locally</li>
-                            <li class="event-timeline-list-item">Hosting a static portfolio website on AWS S3</li>
-                        </ul>
-                    </div>
+                <div class="event-timeline-header">
+                    <h1 class="event-timeline-title">3-Day Event Timeline</h1>
+                    <p class="event-timeline-subtitle">Your journey through AWS and cloud computing</p>
                 </div>
 
-                <!-- Day 2 -->
-                <div class="event-timeline-item">
-                    <div class="event-timeline-dot"></div>
-                    <div class="event-timeline-card">
-                        <span class="event-timeline-day-badge">Day 2</span>
-                        <h2 class="event-timeline-card-title">AI Foundations & Modern Cloud Applications</h2>
-                        <h3 class="event-timeline-card-subtitle">Understanding AI concepts and building AI-powered solutions on AWS</h3>
-                        <ul class="event-timeline-list">
-                            <li class="event-timeline-list-item">What Artificial Intelligence is and how it works</li>
-                            <li class="event-timeline-list-item">Difference between ML, Generative AI, and traditional applications</li>
-                            <li class="event-timeline-list-item">Where AI fits in cloud platforms</li>
-                            <li class="event-timeline-list-item">Real-world AI use cases students already use</li>
-                            <li class="event-timeline-list-item">Core AI terminology: LLMs, RAG, Foundation Models</li>
-                            <li class="event-timeline-list-item">Introduction to Kiro and its role in the AI lifecycle</li>
-                            <li class="event-timeline-list-item">How tools like Kiro accelerate AI application development</li>
-                        </ul>
+                <div class="event-timeline-content">
+                    <!-- Day 1 -->
+                    <div class="event-timeline-item">
+                        <div class="event-timeline-dot"></div>
+                        <div class="event-timeline-card">
+                            <span class="event-timeline-day-badge">Day 1</span>
+                            <h2 class="event-timeline-card-title">Cloud & AWS Foundations + Portfolio Mindset</h2>
+                            <h3 class="event-timeline-card-subtitle">Building strong cloud fundamentals and a portfolio
+                                mindset</h3>
+                            <ul class="event-timeline-list">
+                                <li class="event-timeline-list-item">What is cloud computing and why it matters today
+                                </li>
+                                <li class="event-timeline-list-item">Traditional IT vs Cloud (cost, scalability, speed)
+                                </li>
+                                <li class="event-timeline-list-item">Cloud service models: IaaS, PaaS, SaaS</li>
+                                <li class="event-timeline-list-item">Public cloud overview & shared responsibility model
+                                </li>
+                                <li class="event-timeline-list-item">AWS global infrastructure: regions and availability
+                                    zones</li>
+                                <li class="event-timeline-list-item">Core AWS services overview and AWS Free Tier</li>
+                                <li class="event-timeline-list-item">Building a cloud portfolio and testing locally</li>
+                                <li class="event-timeline-list-item">Hosting a static portfolio website on AWS S3</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Day 3 -->
-                <div class="event-timeline-item">
-                    <div class="event-timeline-dot"></div>
-                    <div class="event-timeline-card">
-                        <span class="event-timeline-day-badge">Day 3</span>
-                        <h2 class="event-timeline-card-title">AI-Powered Applications on AWS</h2>
-                        <h3 class="event-timeline-card-subtitle">Building and deploying AI-driven applications using AWS services</h3>
-                        <ul class="event-timeline-list">
-                            <li class="event-timeline-list-item">Introduction to AWS Bedrock and foundation models</li>
-                            <li class="event-timeline-list-item">AWS Lambda for serverless backend logic</li>
-                            <li class="event-timeline-list-item">API Gateway for exposing AI services</li>
-                            <li class="event-timeline-list-item">Integrating Bedrock with Lambda and APIs</li>
-                            <li class="event-timeline-list-item">Hosting and accessing AI applications over the internet</li>
-                            <li class="event-timeline-list-item">End-to-end AI-powered chatbot architecture</li>
-                            <li class="event-timeline-list-item">Final wrap-up and learning outcomes</li>
-                        </ul>
+                    <!-- Day 2 -->
+                    <div class="event-timeline-item">
+                        <div class="event-timeline-dot"></div>
+                        <div class="event-timeline-card">
+                            <span class="event-timeline-day-badge">Day 2</span>
+                            <h2 class="event-timeline-card-title">AI Foundations & Modern Cloud Applications</h2>
+                            <h3 class="event-timeline-card-subtitle">Understanding AI concepts and building AI-powered
+                                solutions on AWS</h3>
+                            <ul class="event-timeline-list">
+                                <li class="event-timeline-list-item">What Artificial Intelligence is and how it works
+                                </li>
+                                <li class="event-timeline-list-item">Difference between ML, Generative AI, and
+                                    traditional applications</li>
+                                <li class="event-timeline-list-item">Where AI fits in cloud platforms</li>
+                                <li class="event-timeline-list-item">Real-world AI use cases students already use</li>
+                                <li class="event-timeline-list-item">Core AI terminology: LLMs, RAG, Foundation Models
+                                </li>
+                                <li class="event-timeline-list-item">Introduction to Kiro and its role in the AI
+                                    lifecycle</li>
+                                <li class="event-timeline-list-item">How tools like Kiro accelerate AI application
+                                    development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="event-timeline-item">
+                        <div class="event-timeline-dot"></div>
+                        <div class="event-timeline-card">
+                            <span class="event-timeline-day-badge">Day 3</span>
+                            <h2 class="event-timeline-card-title">AI-Powered Applications on AWS</h2>
+                            <h3 class="event-timeline-card-subtitle">Building and deploying AI-driven applications using
+                                AWS services</h3>
+                            <ul class="event-timeline-list">
+                                <li class="event-timeline-list-item">Introduction to AWS Bedrock and foundation models
+                                </li>
+                                <li class="event-timeline-list-item">AWS Lambda for serverless backend logic</li>
+                                <li class="event-timeline-list-item">API Gateway for exposing AI services</li>
+                                <li class="event-timeline-list-item">Integrating Bedrock with Lambda and APIs</li>
+                                <li class="event-timeline-list-item">Hosting and accessing AI applications over the
+                                    internet</li>
+                                <li class="event-timeline-list-item">End-to-end AI-powered chatbot architecture</li>
+                                <li class="event-timeline-list-item">Final wrap-up and learning outcomes</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
     <!-- Registration Section -->
     <section class="registration" id="register">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Register Now</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">Secure your spot for TechVaaganza 2025</p>
-        </div>
-        <div class="registration-container">
-            <div class="registration-form-container">
-                <form class="registration-form" id="techVaaganzaForm">
-                    <div class="form-group">
-                        <label for="studentName">Full Name *</label>
-                        <input type="text" id="studentName" name="name" required placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="studentRoll">Roll Number *</label>
-                        <input type="text" id="studentRoll" name="rollNumber" required
-                            placeholder="Enter your roll number">
-                    </div>
-                    <div class="form-group">
-                        <label for="studentBranch">Branch *</label>
-                        <select id="studentBranch" name="branch" required>
-                            <option value="">Select your branch</option>
-                            <option value="CSE">Computer Science Engineering (CSE)</option>
-                            <option value="CSE">Computer Science & Machine Learning (CSM)</option>
-                            <option value="CSE">Computer Science & Data Science (CSD)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="studentYear">Year of Study *</label>
-                        <select id="studentYear" name="year" required>
-                            <option value="">Select your year</option>
-                            <option value="2">2nd Year</option>
-                            <option value="3">3rd Year</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="studentEmail">Email Address *</label>
-                        <input type="email" id="studentEmail" name="email" required placeholder="your.email@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="studentPhone">Phone Number *</label>
-                        <input type="tel" id="studentPhone" name="phone" required placeholder="10-digit mobile number"
-                            pattern="[0-9]{10}">
-                    </div>
-                    
-                    <!-- QR Payment Section -->
-                    <div class="qr-payment-section">
-                        <h4>Payment (₹500)</h4>
-                        
-                        <!-- QR Code Image (Non-clickable) -->
-                        <div class="qr-code-link">
-                            <img src="images/qr-code.jpeg" alt="Payment QR Code" class="qr-code-image">
-                        </div>
-                        
-                        <!-- Payment Buttons Container -->
-                        <div class="upi-buttons-container">
-                            <!-- Download QR Code Button -->
-                            <button type="button" class="upi-payment-btn qr-download-btn" id="downloadQrBtn">
-                                <svg class="upi-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="7 10 12 15 17 10"></polyline>
-                                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                                </svg>
-                                Download QR Code
-                            </button>
-                        </div>
-                        
-                        <p class="payment-instructions">
-                            <strong>Download the QR code</strong>, scan and pay in your UPI app, then <strong>enter the transaction ID</strong> below
-                        </p>
-                    </div>
-                    
-                    <div class="form-group transaction-id-group">
-                        <label for="studentTransaction">Transaction ID *</label>
-                        <input type="text" id="studentTransaction" name="transactionId" required 
-                            placeholder="Enter your transaction ID" minlength="6">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="paymentScreenshot">Payment Screenshot *</label>
-                        <input type="file" id="paymentScreenshot" name="paymentScreenshot" required 
-                            accept="image/*,.pdf" class="file-input">
-                        <small class="form-helper-text">Upload screenshot of your payment confirmation (Image or PDF, max 5MB)</small>
-                    </div>
-                    
-                    <div id="formMessage" class="form-message-hidden"></div>
-                    
-                    <button type="submit" class="btn btn-primary btn-large btn-register" id="submitRegistration">
-                        Submit Registration
-                    </button>
-                </form>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Register Now</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Secure your spot for TechVaaganza 2025</p>
             </div>
-            
+            <div class="registration-container">
+                <div class="registration-form-container">
+                    <form class="registration-form" id="techVaaganzaForm">
+                        <div class="form-group">
+                            <label for="studentName">Full Name *</label>
+                            <input type="text" id="studentName" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentRoll">Roll Number *</label>
+                            <input type="text" id="studentRoll" name="rollNumber" required
+                                placeholder="Enter your roll number">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentBranch">Branch *</label>
+                            <select id="studentBranch" name="branch" required>
+                                <option value="">Select your branch</option>
+                                <option value="CSE">Computer Science Engineering (CSE)</option>
+                                <option value="CSE">Computer Science & Machine Learning (CSM)</option>
+                                <option value="CSE">Computer Science & Data Science (CSD)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentYear">Year of Study *</label>
+                            <select id="studentYear" name="year" required>
+                                <option value="">Select your year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentEmail">Email Address *</label>
+                            <input type="email" id="studentEmail" name="email" required
+                                placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentPhone">Phone Number *</label>
+                            <input type="tel" id="studentPhone" name="phone" required
+                                placeholder="10-digit mobile number" pattern="[0-9]{10}">
+                        </div>
+
+                        <!-- QR Payment Section -->
+                        <div class="qr-payment-section">
+                            <h4>Payment (₹500)</h4>
+
+                            <!-- QR Code Image (Non-clickable) -->
+                            <div class="qr-code-link">
+                                <img src="images/qr-code.jpeg" alt="Payment QR Code" class="qr-code-image">
+                            </div>
+
+                            <!-- Payment Buttons Container -->
+                            <div class="upi-buttons-container">
+                                <!-- Download QR Code Button -->
+                                <button type="button" class="upi-payment-btn qr-download-btn" id="downloadQrBtn">
+                                    <svg class="upi-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    Download QR Code
+                                </button>
+                            </div>
+
+                            <p class="payment-instructions">
+                                <strong>Download the QR code</strong>, scan and pay in your UPI app, then <strong>enter
+                                    the transaction ID</strong> below
+                            </p>
+                        </div>
+
+                        <div class="form-group transaction-id-group">
+                            <label for="studentTransaction">Transaction ID *</label>
+                            <input type="text" id="studentTransaction" name="transactionId" required
+                                placeholder="Enter your transaction ID" minlength="6">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentScreenshot">Payment Screenshot *</label>
+                            <input type="file" id="paymentScreenshot" name="paymentScreenshot" required
+                                accept="image/*,.pdf" class="file-input">
+                            <small class="form-helper-text">Upload screenshot of your payment confirmation (Image or
+                                PDF, max 5MB)</small>
+                        </div>
+
+                        <div id="formMessage" class="form-message-hidden"></div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-register" id="submitRegistration">
+                            Submit Registration
+                        </button>
+                    </form>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
     <!-- Faculty / Dignitaries Section -->
 
-<!-- ISOLATED TEAM MEMBERS SECTION -->
-<section id="team-members-auto-section">
-    <div class="container team-auto-container">
-        
-        <!-- Section Header -->
-        <div class="team-auto-header team-fade-in">
-            <span class="team-auto-label">Our Core Team</span>
-            <h2 class="team-auto-title">Meet The Team</h2>
-            <p class="team-auto-subtitle">
-                Passionate individuals working together to make this event extraordinary
-            </p>
-        </div>
+    <!-- ISOLATED TEAM MEMBERS SECTION -->
+    <section id="team-members-auto-section">
+        <div class="container team-auto-container">
 
-        <!-- Auto-Sliding Carousel -->
-        <div class="team-auto-carousel-wrapper">
-            <div class="team-auto-track">
-                
-                <!-- Team Member 1 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Team Member 1">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Rahul Verma</h3>
-                        <p class="team-member-role">Event Coordinator</p>
-                        <p class="team-member-department">CSE Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 2 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400" alt="Team Member 2">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Priya Sharma</h3>
-                        <p class="team-member-role">Technical Lead</p>
-                        <p class="team-member-department">IT Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="Team Member 3">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Arjun Reddy</h3>
-                        <p class="team-member-role">Design Head</p>
-                        <p class="team-member-department">CSE Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400" alt="Team Member 4">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Sneha Patel</h3>
-                        <p class="team-member-role">Marketing Lead</p>
-                        <p class="team-member-department">MBA Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Team Member 5">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Vikram Singh</h3>
-                        <p class="team-member-role">Logistics Manager</p>
-                        <p class="team-member-department">CSE Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 6 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Team Member 6">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Ananya Desai</h3>
-                        <p class="team-member-role">Content Writer</p>
-                        <p class="team-member-department">ENG Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 7 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Team Member 7">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Karthik Menon</h3>
-                        <p class="team-member-role">Sponsorship Head</p>
-                        <p class="team-member-department">BBA Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 8 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Team Member 8">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Divya Rao</h3>
-                        <p class="team-member-role">Social Media Lead</p>
-                        <p class="team-member-department">COMM Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 9 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Team Member 9">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Aditya Kumar</h3>
-                        <p class="team-member-role">Tech Support</p>
-                        <p class="team-member-department">IT Dept</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 10 -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Team Member 10">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Meera Nair</h3>
-                        <p class="team-member-role">Volunteer Manager</p>
-                        <p class="team-member-department">CSE Dept</p>
-                    </div>
-                </div>
-
-                <!-- DUPLICATE CARDS FOR SEAMLESS LOOP -->
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Team Member 1">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Rahul Verma</h3>
-                        <p class="team-member-role">Event Coordinator</p>
-                        <p class="team-member-department">CSE Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400" alt="Team Member 2">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Priya Sharma</h3>
-                        <p class="team-member-role">Technical Lead</p>
-                        <p class="team-member-department">IT Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="Team Member 3">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Arjun Reddy</h3>
-                        <p class="team-member-role">Design Head</p>
-                        <p class="team-member-department">CSE Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400" alt="Team Member 4">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Sneha Patel</h3>
-                        <p class="team-member-role">Marketing Lead</p>
-                        <p class="team-member-department">MBA Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Team Member 5">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Vikram Singh</h3>
-                        <p class="team-member-role">Logistics Manager</p>
-                        <p class="team-member-department">CSE Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Team Member 6">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Ananya Desai</h3>
-                        <p class="team-member-role">Content Writer</p>
-                        <p class="team-member-department">ENG Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Team Member 7">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Karthik Menon</h3>
-                        <p class="team-member-role">Sponsorship Head</p>
-                        <p class="team-member-department">BBA Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Team Member 8">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Divya Rao</h3>
-                        <p class="team-member-role">Social Media Lead</p>
-                        <p class="team-member-department">COMM Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Team Member 9">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Aditya Kumar</h3>
-                        <p class="team-member-role">Tech Support</p>
-                        <p class="team-member-department">IT Dept</p>
-                    </div>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Team Member 10">
-                    </div>
-                    <div class="team-member-info">
-                        <h3 class="team-member-name">Meera Nair</h3>
-                        <p class="team-member-role">Volunteer Manager</p>
-                        <p class="team-member-department">CSE Dept</p>
-                    </div>
-                </div>
-
+            <!-- Section Header -->
+            <div class="team-auto-header team-fade-in">
+                <span class="team-auto-label">Our Core Team</span>
+                <h2 class="team-auto-title">Meet The Team</h2>
+                <p class="team-auto-subtitle">
+                    Passionate individuals working together to make this event extraordinary
+                </p>
             </div>
+
+            <!-- Auto-Sliding Carousel -->
+            <div class="team-auto-carousel-wrapper">
+                <div class="team-auto-track">
+
+                    <!-- Team Member 1 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+                                alt="Team Member 1">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Rahul Verma</h3>
+                            <p class="team-member-role">Event Coordinator</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+                                alt="Team Member 2">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Priya Sharma</h3>
+                            <p class="team-member-role">Technical Lead</p>
+                            <p class="team-member-department">IT Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+                                alt="Team Member 3">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Arjun Reddy</h3>
+                            <p class="team-member-role">Design Head</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400"
+                                alt="Team Member 4">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Sneha Patel</h3>
+                            <p class="team-member-role">Marketing Lead</p>
+                            <p class="team-member-department">MBA Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 5 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400"
+                                alt="Team Member 5">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Vikram Singh</h3>
+                            <p class="team-member-role">Logistics Manager</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 6 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400"
+                                alt="Team Member 6">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Ananya Desai</h3>
+                            <p class="team-member-role">Content Writer</p>
+                            <p class="team-member-department">ENG Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 7 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+                                alt="Team Member 7">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Karthik Menon</h3>
+                            <p class="team-member-role">Sponsorship Head</p>
+                            <p class="team-member-department">BBA Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 8 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+                                alt="Team Member 8">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Divya Rao</h3>
+                            <p class="team-member-role">Social Media Lead</p>
+                            <p class="team-member-department">COMM Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 9 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400"
+                                alt="Team Member 9">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Aditya Kumar</h3>
+                            <p class="team-member-role">Tech Support</p>
+                            <p class="team-member-department">IT Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 10 -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400"
+                                alt="Team Member 10">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Meera Nair</h3>
+                            <p class="team-member-role">Volunteer Manager</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
+                    <!-- DUPLICATE CARDS FOR SEAMLESS LOOP -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+                                alt="Team Member 1">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Rahul Verma</h3>
+                            <p class="team-member-role">Event Coordinator</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+                                alt="Team Member 2">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Priya Sharma</h3>
+                            <p class="team-member-role">Technical Lead</p>
+                            <p class="team-member-department">IT Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+                                alt="Team Member 3">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Arjun Reddy</h3>
+                            <p class="team-member-role">Design Head</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400"
+                                alt="Team Member 4">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Sneha Patel</h3>
+                            <p class="team-member-role">Marketing Lead</p>
+                            <p class="team-member-department">MBA Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400"
+                                alt="Team Member 5">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Vikram Singh</h3>
+                            <p class="team-member-role">Logistics Manager</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400"
+                                alt="Team Member 6">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Ananya Desai</h3>
+                            <p class="team-member-role">Content Writer</p>
+                            <p class="team-member-department">ENG Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+                                alt="Team Member 7">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Karthik Menon</h3>
+                            <p class="team-member-role">Sponsorship Head</p>
+                            <p class="team-member-department">BBA Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+                                alt="Team Member 8">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Divya Rao</h3>
+                            <p class="team-member-role">Social Media Lead</p>
+                            <p class="team-member-department">COMM Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400"
+                                alt="Team Member 9">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Aditya Kumar</h3>
+                            <p class="team-member-role">Tech Support</p>
+                            <p class="team-member-department">IT Dept</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400"
+                                alt="Team Member 10">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Meera Nair</h3>
+                            <p class="team-member-role">Volunteer Manager</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-
-    </div>
-</section>
+    </section>
 
 
 
 
 
- <!-- Hero Cards Section - START -->
+    <!-- Hero Cards Section - START -->
     <section id="hero-cards-section">
         <div id="hero-cards-container">
-            
+
             <!-- Card 1 -->
             <article class="hero-card-item">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Mountain Adventure" class="hero-card-bg-image">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop"
+                    alt="Mountain Adventure" class="hero-card-bg-image">
                 <div class="hero-card-content-overlay">
                     <h3 class="hero-card-heading">Mountain Adventure</h3>
                     <p class="hero-card-text">
-                        Explore breathtaking mountain peaks and discover the beauty of nature. Perfect for adventurers seeking unforgettable experiences in the great outdoors.
+                        Explore breathtaking mountain peaks and discover the beauty of nature. Perfect for adventurers
+                        seeking unforgettable experiences in the great outdoors.
                     </p>
                     <button class="hero-card-cta-btn">Explore Now</button>
                 </div>
@@ -3222,11 +3348,13 @@
 
             <!-- Card 2 -->
             <article class="hero-card-item">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=800&fit=crop" alt="Beach Paradise" class="hero-card-bg-image">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=800&fit=crop"
+                    alt="Beach Paradise" class="hero-card-bg-image">
                 <div class="hero-card-content-overlay">
                     <h3 class="hero-card-heading">Beach Paradise</h3>
                     <p class="hero-card-text">
-                        Relax on pristine sandy beaches with crystal-clear waters. Experience the ultimate tropical getaway and create memories that last a lifetime.
+                        Relax on pristine sandy beaches with crystal-clear waters. Experience the ultimate tropical
+                        getaway and create memories that last a lifetime.
                     </p>
                     <button class="hero-card-cta-btn">Discover More</button>
                 </div>
@@ -3272,399 +3400,399 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    // ISOLATED JAVASCRIPT FOR TEAM MEMBERS SECTION
-    (function() {
-        'use strict';
-        
-        // Intersection Observer for fade-in animation
-        const teamObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('team-fade-in');
+        // ISOLATED JAVASCRIPT FOR TEAM MEMBERS SECTION
+        (function () {
+            'use strict';
+
+            // Intersection Observer for fade-in animation
+            const teamObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('team-fade-in');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            // Observe section header
+            const teamHeader = document.querySelector('.team-auto-header');
+            if (teamHeader) {
+                teamObserver.observe(teamHeader);
+            }
+
+        })();
+    </script>
+
+
+    <script>
+        // TechVaaganza 2025 - Form Submission Handler
+        // Your Apps Script Web App URL
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzqD0Q5DYgGqpQWkDsSXZOJdqeFEhT6m33KTaln0J9dEi5Z4ywUHkSZhA1jmiO_5xSIhA/exec';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('techVaaganzaForm');
+            const submitBtn = document.getElementById('submitRegistration');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                // Disable submit button
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+
+                try {
+                    // Get form data
+                    const formData = {
+                        name: document.getElementById('studentName').value.trim(),
+                        rollNumber: document.getElementById('studentRoll').value.trim(),
+                        branch: document.getElementById('studentBranch').value,
+                        year: document.getElementById('studentYear').value,
+                        email: document.getElementById('studentEmail').value.trim(),
+                        phone: document.getElementById('studentPhone').value.trim(),
+                        transactionId: document.getElementById('studentTransaction').value.trim()
+                    };
+
+                    // Validate all fields
+                    if (!formData.name || !formData.rollNumber || !formData.branch ||
+                        !formData.year || !formData.email || !formData.phone ||
+                        !formData.transactionId) {
+                        throw new Error('Please fill all required fields');
+                    }
+
+                    // Get payment screenshot
+                    const fileInput = document.getElementById('paymentScreenshot');
+                    const file = fileInput.files[0];
+
+                    if (!file) {
+                        throw new Error('Please upload payment screenshot');
+                    }
+
+                    // Check file size (max 5MB)
+                    if (file.size > 5 * 1024 * 1024) {
+                        throw new Error('File size must be less than 5MB');
+                    }
+
+                    // Check file type
+                    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'application/pdf'];
+                    if (!allowedTypes.includes(file.type)) {
+                        throw new Error('Please upload an image (JPG, PNG, GIF) or PDF file');
+                    }
+
+                    // Show uploading message
+                    showMessage('📤 Uploading... Please wait, this may take a moment', 'info');
+
+                    // Convert file to base64
+                    const base64File = await fileToBase64(file);
+                    formData.paymentScreenshot = base64File;
+
+                    // Submit to Google Apps Script
+                    const response = await fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // Since mode is 'no-cors', we can't read the response
+                    // But if no error was thrown, submission was successful
+                    showMessage('✅ Registration submitted successfully! Check your email for confirmation.', 'success');
+
+                    // Reset form
+                    form.reset();
+
+                    // Scroll to message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                } catch (error) {
+                    console.error('Submission error:', error);
+                    showMessage('❌ Error: ' + error.message, 'error');
+                } finally {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Registration';
                 }
             });
-        }, {
-            threshold: 0.2
-        });
 
-        // Observe section header
-        const teamHeader = document.querySelector('.team-auto-header');
-        if (teamHeader) {
-            teamObserver.observe(teamHeader);
-        }
+            // Helper function to convert file to base64
+            function fileToBase64(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = () => resolve(reader.result);
+                    reader.onerror = error => reject(error);
+                });
+            }
 
-    })();
-</script>
-   
+            // Helper function to show messages
+            function showMessage(message, type) {
+                formMessage.textContent = message;
+                formMessage.className = 'form-message form-message-' + type;
+                formMessage.style.display = 'block';
 
-<script>
-// TechVaaganza 2025 - Form Submission Handler
-// Your Apps Script Web App URL
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzqD0Q5DYgGqpQWkDsSXZOJdqeFEhT6m33KTaln0J9dEi5Z4ywUHkSZhA1jmiO_5xSIhA/exec';
-
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('techVaaganzaForm');
-  const submitBtn = document.getElementById('submitRegistration');
-  const formMessage = document.getElementById('formMessage');
-  
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    // Disable submit button
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Submitting...';
-    
-    try {
-      // Get form data
-      const formData = {
-        name: document.getElementById('studentName').value.trim(),
-        rollNumber: document.getElementById('studentRoll').value.trim(),
-        branch: document.getElementById('studentBranch').value,
-        year: document.getElementById('studentYear').value,
-        email: document.getElementById('studentEmail').value.trim(),
-        phone: document.getElementById('studentPhone').value.trim(),
-        transactionId: document.getElementById('studentTransaction').value.trim()
-      };
-      
-      // Validate all fields
-      if (!formData.name || !formData.rollNumber || !formData.branch || 
-          !formData.year || !formData.email || !formData.phone || 
-          !formData.transactionId) {
-        throw new Error('Please fill all required fields');
-      }
-      
-      // Get payment screenshot
-      const fileInput = document.getElementById('paymentScreenshot');
-      const file = fileInput.files[0];
-      
-      if (!file) {
-        throw new Error('Please upload payment screenshot');
-      }
-      
-      // Check file size (max 5MB)
-      if (file.size > 5 * 1024 * 1024) {
-        throw new Error('File size must be less than 5MB');
-      }
-      
-      // Check file type
-      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'application/pdf'];
-      if (!allowedTypes.includes(file.type)) {
-        throw new Error('Please upload an image (JPG, PNG, GIF) or PDF file');
-      }
-      
-      // Show uploading message
-      showMessage('📤 Uploading... Please wait, this may take a moment', 'info');
-      
-      // Convert file to base64
-      const base64File = await fileToBase64(file);
-      formData.paymentScreenshot = base64File;
-      
-      // Submit to Google Apps Script
-      const response = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-      
-      // Since mode is 'no-cors', we can't read the response
-      // But if no error was thrown, submission was successful
-      showMessage('✅ Registration submitted successfully! Check your email for confirmation.', 'success');
-      
-      // Reset form
-      form.reset();
-      
-      // Scroll to message
-      formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      
-    } catch (error) {
-      console.error('Submission error:', error);
-      showMessage('❌ Error: ' + error.message, 'error');
-    } finally {
-      // Re-enable submit button
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit Registration';
-    }
-  });
-  
-  // Helper function to convert file to base64
-  function fileToBase64(file) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = error => reject(error);
-    });
-  }
-  
-  // Helper function to show messages
-  function showMessage(message, type) {
-    formMessage.textContent = message;
-    formMessage.className = 'form-message form-message-' + type;
-    formMessage.style.display = 'block';
-    
-    // Hide message after 10 seconds for success
-    if (type === 'success') {
-      setTimeout(() => {
-        formMessage.style.display = 'none';
-      }, 10000);
-    }
-  }
-  
-  // File input validation
-  document.getElementById('paymentScreenshot').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (file) {
-      // Check file size
-      if (file.size > 5 * 1024 * 1024) {
-        alert('⚠️ File size must be less than 5MB');
-        e.target.value = '';
-        return;
-      }
-      
-      // Check file type
-      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'application/pdf'];
-      if (!allowedTypes.includes(file.type)) {
-        alert('⚠️ Please upload an image (JPG, PNG, GIF) or PDF file');
-        e.target.value = '';
-        return;
-      }
-      
-      // Show file name
-      console.log('File selected:', file.name, '(' + (file.size / 1024).toFixed(2) + ' KB)');
-    }
-  });
-  
-  // Phone number validation - only allow 10 digits
-  document.getElementById('studentPhone').addEventListener('input', function(e) {
-    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
-  });
-  
-  // Transaction ID validation - remove spaces and special characters
-  document.getElementById('studentTransaction').addEventListener('input', function(e) {
-    this.value = this.value.trim().toUpperCase();
-  });
-  
-  // QR Code Download Button
-  document.getElementById('downloadQrBtn').addEventListener('click', async function() {
-    try {
-      const qrImagePath = 'images/qr-code.jpeg';
-      
-      // Fetch the image as blob
-      const response = await fetch(qrImagePath);
-      const blob = await response.blob();
-      
-      // Create download link
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'TechVaaganza-Payment-QR.jpeg';
-      
-      // Trigger download
-      document.body.appendChild(link);
-      link.click();
-      
-      // Cleanup
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-      
-      // Show success message
-      showMessage('✅ QR Code downloaded successfully!', 'success');
-    } catch (error) {
-      console.error('Download error:', error);
-      showMessage('❌ Failed to download QR code. Please try again.', 'error');
-    }
-  });
-});
-</script>
-
-<script>
-    // ISOLATED JAVASCRIPT FOR HERO PARALLAX SECTION
-    (function() {
-        'use strict';
-        
-        const techVideo = document.getElementById('techHeroVideo');
-        const techHeroWrapper = document.getElementById('techHeroWrapper');
-        const techHeroOverlay = document.querySelector('.tech-hero-overlay');
-        const techImagesSection = document.getElementById('techImagesSection');
-        const techSectionTitle = document.getElementById('techSectionTitle');
-
-        let videoFullyVisible = false;
-
-        // Handle scroll to reveal video and sections
-        function techHandleScroll() {
-            const scrollY = window.scrollY;
-            const heroHeight = techHeroWrapper.offsetHeight;
-            
-            // Phase 1: Reveal video (0 to 40% of hero height scroll)
-            const revealThreshold = heroHeight * 0.4;
-            if (scrollY < revealThreshold) {
-                const scrollPercent = scrollY / revealThreshold;
-                
-                // Fade out dark overlay to 30% opacity (slight transparency)
-                techHeroOverlay.style.opacity = 1 - (scrollPercent * 0.7);
-                
-                // Fade in video
-                if (scrollPercent > 0.3) {
-                    techVideo.classList.add('tech-visible');
+                // Hide message after 10 seconds for success
+                if (type === 'success') {
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 10000);
                 }
-                
-                videoFullyVisible = false;
-            } else {
-                // Video is visible with slight transparency
-                techHeroOverlay.style.opacity = 0.3;
-                techVideo.classList.add('tech-visible');
-                videoFullyVisible = true;
             }
-            
-            // Phase 2: After video is visible, slide in images section
-            if (videoFullyVisible && scrollY > revealThreshold) {
-                techImagesSection.classList.add('tech-slide-in');
-                techSectionTitle.classList.add('tech-animate-in');
+
+            // File input validation
+            document.getElementById('paymentScreenshot').addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file) {
+                    // Check file size
+                    if (file.size > 5 * 1024 * 1024) {
+                        alert('⚠️ File size must be less than 5MB');
+                        e.target.value = '';
+                        return;
+                    }
+
+                    // Check file type
+                    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'application/pdf'];
+                    if (!allowedTypes.includes(file.type)) {
+                        alert('⚠️ Please upload an image (JPG, PNG, GIF) or PDF file');
+                        e.target.value = '';
+                        return;
+                    }
+
+                    // Show file name
+                    console.log('File selected:', file.name, '(' + (file.size / 1024).toFixed(2) + ' KB)');
+                }
+            });
+
+            // Phone number validation - only allow 10 digits
+            document.getElementById('studentPhone').addEventListener('input', function (e) {
+                this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+            });
+
+            // Transaction ID validation - remove spaces and special characters
+            document.getElementById('studentTransaction').addEventListener('input', function (e) {
+                this.value = this.value.trim().toUpperCase();
+            });
+
+            // QR Code Download Button
+            document.getElementById('downloadQrBtn').addEventListener('click', async function () {
+                try {
+                    const qrImagePath = 'images/qr-code.jpeg';
+
+                    // Fetch the image as blob
+                    const response = await fetch(qrImagePath);
+                    const blob = await response.blob();
+
+                    // Create download link
+                    const url = window.URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'TechVaaganza-Payment-QR.jpeg';
+
+                    // Trigger download
+                    document.body.appendChild(link);
+                    link.click();
+
+                    // Cleanup
+                    document.body.removeChild(link);
+                    window.URL.revokeObjectURL(url);
+
+                    // Show success message
+                    showMessage('✅ QR Code downloaded successfully!', 'success');
+                } catch (error) {
+                    console.error('Download error:', error);
+                    showMessage('❌ Failed to download QR code. Please try again.', 'error');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // ISOLATED JAVASCRIPT FOR HERO PARALLAX SECTION
+        (function () {
+            'use strict';
+
+            const techVideo = document.getElementById('techHeroVideo');
+            const techHeroWrapper = document.getElementById('techHeroWrapper');
+            const techHeroOverlay = document.querySelector('.tech-hero-overlay');
+            const techImagesSection = document.getElementById('techImagesSection');
+            const techSectionTitle = document.getElementById('techSectionTitle');
+
+            let videoFullyVisible = false;
+
+            // Handle scroll to reveal video and sections
+            function techHandleScroll() {
+                const scrollY = window.scrollY;
+                const heroHeight = techHeroWrapper.offsetHeight;
+
+                // Phase 1: Reveal video (0 to 40% of hero height scroll)
+                const revealThreshold = heroHeight * 0.4;
+                if (scrollY < revealThreshold) {
+                    const scrollPercent = scrollY / revealThreshold;
+
+                    // Fade out dark overlay to 30% opacity (slight transparency)
+                    techHeroOverlay.style.opacity = 1 - (scrollPercent * 0.7);
+
+                    // Fade in video
+                    if (scrollPercent > 0.3) {
+                        techVideo.classList.add('tech-visible');
+                    }
+
+                    videoFullyVisible = false;
+                } else {
+                    // Video is visible with slight transparency
+                    techHeroOverlay.style.opacity = 0.3;
+                    techVideo.classList.add('tech-visible');
+                    videoFullyVisible = true;
+                }
+
+                // Phase 2: After video is visible, slide in images section
+                if (videoFullyVisible && scrollY > revealThreshold) {
+                    techImagesSection.classList.add('tech-slide-in');
+                    techSectionTitle.classList.add('tech-animate-in');
+                }
+
+                // Parallax effect
+                techHeroWrapper.style.transform = `translateY(${scrollY * 0.5}px)`;
             }
-            
-            // Parallax effect
-            techHeroWrapper.style.transform = `translateY(${scrollY * 0.5}px)`;
-        }
 
-        // Scroll event listener
-        window.addEventListener('scroll', techHandleScroll);
+            // Scroll event listener
+            window.addEventListener('scroll', techHandleScroll);
 
-        // Initial load
-        setTimeout(() => {
-            techHandleScroll();
-        }, 500);
+            // Initial load
+            setTimeout(() => {
+                techHandleScroll();
+            }, 500);
 
-        // Smooth scroll for scroll indicator
-        const techScrollIndicator = document.querySelector('.tech-scroll-indicator');
-        if (techScrollIndicator) {
-            techScrollIndicator.addEventListener('click', () => {
-                window.scrollTo({
-                    top: techHeroWrapper.offsetHeight,
-                    behavior: 'smooth'
+            // Smooth scroll for scroll indicator
+            const techScrollIndicator = document.querySelector('.tech-scroll-indicator');
+            if (techScrollIndicator) {
+                techScrollIndicator.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: techHeroWrapper.offsetHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+        })();
+
+
+
+
+
+
+        // ISOLATED JAVASCRIPT FOR VISUAL DIARY CAROUSEL
+        (function () {
+            'use strict';
+
+            let vdcCurrentIndex = 0;
+            const vdcCards = document.querySelectorAll('.vdc-card');
+            const vdcIndicators = document.querySelectorAll('.vdc-indicator');
+            const vdcTotalCards = vdcCards.length;
+
+            function vdcUpdateCarousel() {
+                vdcCards.forEach((card, index) => {
+                    // Calculate relative position from current index
+                    let position = index - vdcCurrentIndex;
+
+                    // Handle circular wrapping
+                    // If position is too negative, wrap it to the positive side
+                    if (position < -Math.floor(vdcTotalCards / 2)) {
+                        position += vdcTotalCards;
+                    }
+                    // If position is too positive, wrap it to the negative side
+                    if (position > Math.floor(vdcTotalCards / 2)) {
+                        position -= vdcTotalCards;
+                    }
+
+                    // Set data-position based on calculated position
+                    if (position === 0) {
+                        card.setAttribute('data-position', '0');
+                    } else if (position === 1) {
+                        card.setAttribute('data-position', '1');
+                    } else if (position === 2) {
+                        card.setAttribute('data-position', '2');
+                    } else if (position === -1) {
+                        card.setAttribute('data-position', '-1');
+                    } else if (position === -2) {
+                        card.setAttribute('data-position', '-2');
+                    } else {
+                        card.setAttribute('data-position', 'hidden');
+                    }
+                });
+
+                // Update indicators
+                vdcIndicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === vdcCurrentIndex);
+                });
+            }
+
+            function vdcNextSlide() {
+                vdcCurrentIndex = (vdcCurrentIndex + 1) % vdcTotalCards;
+                vdcUpdateCarousel();
+            }
+
+            function vdcPrevSlide() {
+                vdcCurrentIndex = (vdcCurrentIndex - 1 + vdcTotalCards) % vdcTotalCards;
+                vdcUpdateCarousel();
+            }
+
+            // Event Listeners
+            document.getElementById('vdcArrowRight').addEventListener('click', vdcNextSlide);
+            document.getElementById('vdcArrowLeft').addEventListener('click', vdcPrevSlide);
+
+            // Indicator clicks
+            vdcIndicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    vdcCurrentIndex = index;
+                    vdcUpdateCarousel();
                 });
             });
-        }
 
-    })();
-
-
-
-
-
-
-     // ISOLATED JAVASCRIPT FOR VISUAL DIARY CAROUSEL
-    (function() {
-        'use strict';
-        
-        let vdcCurrentIndex = 0;
-        const vdcCards = document.querySelectorAll('.vdc-card');
-        const vdcIndicators = document.querySelectorAll('.vdc-indicator');
-        const vdcTotalCards = vdcCards.length;
-
-        function vdcUpdateCarousel() {
-            vdcCards.forEach((card, index) => {
-                // Calculate relative position from current index
-                let position = index - vdcCurrentIndex;
-                
-                // Handle circular wrapping
-                // If position is too negative, wrap it to the positive side
-                if (position < -Math.floor(vdcTotalCards / 2)) {
-                    position += vdcTotalCards;
-                }
-                // If position is too positive, wrap it to the negative side
-                if (position > Math.floor(vdcTotalCards / 2)) {
-                    position -= vdcTotalCards;
-                }
-                
-                // Set data-position based on calculated position
-                if (position === 0) {
-                    card.setAttribute('data-position', '0');
-                } else if (position === 1) {
-                    card.setAttribute('data-position', '1');
-                } else if (position === 2) {
-                    card.setAttribute('data-position', '2');
-                } else if (position === -1) {
-                    card.setAttribute('data-position', '-1');
-                } else if (position === -2) {
-                    card.setAttribute('data-position', '-2');
-                } else {
-                    card.setAttribute('data-position', 'hidden');
-                }
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') vdcNextSlide();
+                if (e.key === 'ArrowLeft') vdcPrevSlide();
             });
 
-            // Update indicators
-            vdcIndicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === vdcCurrentIndex);
-            });
-        }
+            // Auto-play (optional)
+            let vdcAutoplay = setInterval(vdcNextSlide, 4000);
 
-        function vdcNextSlide() {
-            vdcCurrentIndex = (vdcCurrentIndex + 1) % vdcTotalCards;
+            // Pause on hover
+            const carousel = document.querySelector('.vdc-carousel-wrapper');
+            carousel.addEventListener('mouseenter', () => {
+                clearInterval(vdcAutoplay);
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                vdcAutoplay = setInterval(vdcNextSlide, 4000);
+            });
+
+            // Touch/Swipe support
+            let vdcTouchStartX = 0;
+            let vdcTouchEndX = 0;
+
+            carousel.addEventListener('touchstart', (e) => {
+                vdcTouchStartX = e.changedTouches[0].screenX;
+            });
+
+            carousel.addEventListener('touchend', (e) => {
+                vdcTouchEndX = e.changedTouches[0].screenX;
+                vdcHandleSwipe();
+            });
+
+            function vdcHandleSwipe() {
+                if (vdcTouchEndX < vdcTouchStartX - 50) vdcNextSlide();
+                if (vdcTouchEndX > vdcTouchStartX + 50) vdcPrevSlide();
+            }
+
+            // Initialize
             vdcUpdateCarousel();
-        }
 
-        function vdcPrevSlide() {
-            vdcCurrentIndex = (vdcCurrentIndex - 1 + vdcTotalCards) % vdcTotalCards;
-            vdcUpdateCarousel();
-        }
-
-        // Event Listeners
-        document.getElementById('vdcArrowRight').addEventListener('click', vdcNextSlide);
-        document.getElementById('vdcArrowLeft').addEventListener('click', vdcPrevSlide);
-
-        // Indicator clicks
-        vdcIndicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                vdcCurrentIndex = index;
-                vdcUpdateCarousel();
-            });
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') vdcNextSlide();
-            if (e.key === 'ArrowLeft') vdcPrevSlide();
-        });
-
-        // Auto-play (optional)
-        let vdcAutoplay = setInterval(vdcNextSlide, 4000);
-
-        // Pause on hover
-        const carousel = document.querySelector('.vdc-carousel-wrapper');
-        carousel.addEventListener('mouseenter', () => {
-            clearInterval(vdcAutoplay);
-        });
-
-        carousel.addEventListener('mouseleave', () => {
-            vdcAutoplay = setInterval(vdcNextSlide, 4000);
-        });
-
-        // Touch/Swipe support
-        let vdcTouchStartX = 0;
-        let vdcTouchEndX = 0;
-
-        carousel.addEventListener('touchstart', (e) => {
-            vdcTouchStartX = e.changedTouches[0].screenX;
-        });
-
-        carousel.addEventListener('touchend', (e) => {
-            vdcTouchEndX = e.changedTouches[0].screenX;
-            vdcHandleSwipe();
-        });
-
-        function vdcHandleSwipe() {
-            if (vdcTouchEndX < vdcTouchStartX - 50) vdcNextSlide();
-            if (vdcTouchEndX > vdcTouchStartX + 50) vdcPrevSlide();
-        }
-
-        // Initialize
-        vdcUpdateCarousel();
-
-    })();
-</script>
+        })();
+    </script>
 </body>
 
 
