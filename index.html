@@ -1706,6 +1706,12 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            pointer-events: none;
         }
 
         .hero-card-item:hover .hero-card-bg-image {
@@ -3464,7 +3470,7 @@
             <!-- Card 1 -->
             <article class="hero-card-item">
                 <img src="./images/Dheeraj_team_4.jpeg"
-                    alt="Dheeraj" class="hero-card-bg-image">
+                    alt="Dheeraj" class="hero-card-bg-image" draggable="false">
                 <div class="hero-card-content-overlay">
                     <h3 class="hero-card-heading">Dheeraj</h3>
                     <p class="hero-card-subtitle">Developer</p>
@@ -3474,7 +3480,7 @@
             <!-- Card 2 -->
             <article class="hero-card-item">
                 <img src="./images/Anuj_team_3.jpeg"
-                    alt="Anuj" class="hero-card-bg-image">
+                    alt="Anuj" class="hero-card-bg-image" draggable="false">
                 <div class="hero-card-content-overlay">
                     <h3 class="hero-card-heading">Anuj</h3>
                     <p class="hero-card-subtitle">Developer</p>
