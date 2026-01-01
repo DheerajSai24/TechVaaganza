@@ -418,6 +418,12 @@
                 border-width: 2px;
             }
         }
+            /* Center Ayesha's face in first carousel image on mobile */
+            @media (max-width: 768px) {
+                .vdc-card[data-position="0"] img {
+                    object-position: center top;
+                }
+            }
 
         @media (max-width: 480px) {
             .vdc-title {
@@ -3325,6 +3331,18 @@
                         </div>
                     </div>
 
+                     <!-- Yojith Card Inserted Beside Noor Banu -->
+                    <div class="team-member-card">
+                        <div class="team-member-image-wrapper">
+                            <img src="./images/yojith_team_40.jpeg" alt="Yojith" draggable="false" oncontextmenu="return false">
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="team-member-name">Yojith</h3>
+                            <p class="team-member-role">Cultural Coordinator</p>
+                            <p class="team-member-department">CSE Dept</p>
+                        </div>
+                    </div>
+
                     <!-- Team Member 28 -->
                     <div class="team-member-card">
                         <div class="team-member-image-wrapper">
@@ -3402,6 +3420,8 @@
                             <p class="team-member-department">CSE Dept</p>
                         </div>
                     </div>
+
+                   
 
                     <!-- Team Member 34 -->
                     <div class="team-member-card">
